@@ -33,6 +33,8 @@ Prioritize the narrowest supported phone, an intended wider composition, relevan
 
 Label native SwiftUI, other native renderers and web output accurately. A web render does not verify native layout. A preview image does not verify a store binary, authenticated backend or personal device. Check actual device/renderer support before proposing a matrix.
 
+Where run_preview_test supports isolated input callbacks, exercise the relevant control and assert its effect on dependent content against the exact saved source. Logical row visibility can include offscreen content; inspect a supported scroll export before claiming the last content is reachable above floating native chrome. A separately authored empty-state fixture verifies that state, not the tap or transition that would produce it. Preserve the original source-bound receipt and identify unsupported actions explicitly.
+
 Use app-owned rendering rather than desktop capture or UI automation. If the required renderer is unavailable, finish source checks and report the precise unverified visual variant.
 
 Platform reference: [Apple Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/). Fetch relevant current component guidance when a task depends on platform-specific behavior.
