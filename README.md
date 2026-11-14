@@ -40,6 +40,8 @@ Use $appmost-release to prepare an internal TestFlight release; inspect readines
 
 The appmost skill includes native-control preferences, modern iOS Liquid Glass guidance, Appmost-specific inset rules, worked design recipes and a measured visual-review routine.
 
+Both skills include an installed format compatibility record: targeted document major, exact reviewed public format release, review date, evidence scope and immutable source. That review baseline is separate from the skill version and the running host's capabilities. Read [compatibility](docs/compatibility.md) for the current baseline and update process.
+
 The skills use public MCP contracts and synthetic examples. They neither copy the full format specification nor guarantee that a renderer, backend or store review will succeed.
 
 ## Validate and package

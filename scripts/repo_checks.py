@@ -1,5 +1,6 @@
 """Portable validation and package boundaries."""
 from __future__ import annotations
+from datetime import date
 import json
 import os
 from pathlib import Path
@@ -74,6 +75,62 @@ def frontmatter(path: Path) -> tuple[dict[str, str], str]:
                     raise CheckError(f"invalid quoted scalar: {key}") from exc
             result[key] = value
     return result, parts[2]
+
+
+def compatibility_metadata(path: Path) -> dict[str, str]:
+    """Read this repository's flat, quoted metadata scalars; not a general YAML parser."""
+    section = path.read_text(encoding="utf-8").split("---", 2)[1]
+    result = {}
+    in_metadata = False
+    for line in section.splitlines():
+        if not line.strip():
+            continue
+        if line == "metadata:":
+            in_metadata = True
+            continue
+        if not line.startswith(" "):
+            in_metadata = False
+        if not in_metadata:
+            continue
+        match = re.fullmatch(r"  ([a-z][a-z0-9_-]*):\s*(.+)", line)
+        if not match:
+            raise CheckError("metadata must use flat, quoted string scalars")
+        key, encoded = match.groups()
+        if key in result:
+            raise CheckError(f"duplicate metadata key: {key}")
+        try:
+            value = json.loads(encoded)
+        except json.JSONDecodeError as exc:
+            raise CheckError(f"invalid metadata scalar: {key}") from exc
+        if not isinstance(value, str):
+            raise CheckError(f"metadata value must be a string: {key}")
+        result[key] = value
+    return result
+
+def check_format_compatibility(metadata: dict[str, str]) -> list[str]:
+    errors = []
+    major = metadata.get("appmost-document-version", "")
+    reviewed = metadata.get("appmost-format-reviewed", "")
+    if not re.fullmatch(r"[1-9][0-9]*", major):
+        errors.append("invalid or missing Appmost document major")
+    if not VERSION.fullmatch(reviewed):
+        errors.append("invalid or missing reviewed format release")
+    elif reviewed.split(".", 1)[0] != major:
+        errors.append("format major mismatch between document and reviewed release")
+    reviewed_at = metadata.get("appmost-format-review-date", "")
+    try:
+        if date.fromisoformat(reviewed_at).isoformat() != reviewed_at:
+            raise ValueError("noncanonical date")
+    except ValueError:
+        errors.append("invalid or missing format review date")
+    reference = metadata.get("appmost-format-reference", "")
+    expected = (r"https://github\.com/appmost/project-format/blob/[0-9a-f]{40}/spec/"
+                + re.escape(reviewed) + r"\.md")
+    if not re.fullmatch(expected, reference):
+        errors.append("format reference must pin a matching public specification to an immutable commit")
+    if metadata.get("appmost-format-review-kind") != "reference-review":
+        errors.append("format review kind must be reference-review; stronger claims need a reviewed evidence policy")
+    return errors
 
 def skill_files(skill: Path) -> list[Path]:
     result = []
@@ -157,9 +214,10 @@ def validate_repository(root: Path) -> list[str]:
                 errors.append(f"{skill.name}: description must contain 1-1024 characters")
             if len(body.splitlines()) >= 500:
                 errors.append(f"{skill.name}: move detail out of the entrypoint (500 lines)")
-            version = re.search(r'^  version:\s*"([^"]+)"\s*$', (skill / "SKILL.md").read_text(), re.M)
-            if not version or version[1] != manifest.get("version"):
+            compatibility = compatibility_metadata(skill / "SKILL.md")
+            if compatibility.get("version") != manifest.get("version"):
                 errors.append(f"{skill.name}: skill/package version mismatch")
+            errors.extend(f"{skill.name}: {message}" for message in check_format_compatibility(compatibility))
             if (skill / "LICENSE.txt").read_bytes() != (root / "LICENSE").read_bytes():
                 errors.append(f"{skill.name}: packaged license differs from repository license")
             ui = (skill / "agents/openai.yaml").read_text()
