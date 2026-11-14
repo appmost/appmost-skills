@@ -18,6 +18,16 @@ Apple's current toolbar guidance favors standard Back and Close symbols. The pac
 
 A SwiftUI API being available does not mean that an Appmost payload exposes it. Use the existing page dismissal and bar-item contract first. If the required native option is not exposed, report that capability gap instead of inventing a field or rewriting the runtime.
 
+## Group settings at the page or container level
+
+For a standard settings form, prefer the page's inset grouped list style. Let that style own the shared group background and outer corners. In Appmost, explicit row backgrounds, corner radii, borders or vertical outer margins can make adjacent rows render as independent cards even when the page already uses inset grouped. Keep those overrides unset on ordinary grouped rows.
+
+Use actual header/footer roles for section titles and supporting text. A hidden-background content label is not automatically a section footer. Put separators between related rows and leave the final row's lower edge clear.
+
+For a group that needs custom composition or a custom surface, use one container row per group with child rows. Give the background and rounding to that parent; keep child surfaces neutral. Choose either page-owned grouping or an intentionally composed group.
+
+Inspect at least two adjacent settings rows together. They should share one continuous surface, with rounded corners only on the group's outer contour. Check the group boundary, footer and separator alignment in light/dark and larger text.
+
 ## Liquid Glass on supported iOS
 
 Modern standard bars and controls adopt the platform appearance through the host/runtime. Let that native layer own its material. Keep ordinary content surfaces, cards and lists readable and restrained; a modern app does not need glass on every section.

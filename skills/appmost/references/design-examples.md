@@ -6,7 +6,7 @@ These are synthetic authoring recipes, not frozen project JSON or screenshots of
 
 Brief: help someone continue reading, browse a collection and find saved items.
 
-Composition: native Library / Saved / Settings roots; a concise page title; one current item with relevant cover imagery; a compact progress/context line; a useful list of other items. Detail opens in the normal navigation stack. Keep settings as a native-feeling grouped form.
+Composition: native Library / Saved / Settings roots; a concise page title; one current item with relevant cover imagery; a compact progress/context line; a useful list of other items. Detail opens in the normal navigation stack. Keep settings as a grouped form owned by the page's inset grouped style, or by one container per group; follow the [grouping guidance](native-design.md#group-settings-at-the-page-or-container-level).
 
 Common generated failure: four oversized gradient cards, a second fake tab bar at the bottom, repeated Read buttons and an unrelated hero metric. Every screen becomes the same stack of detached boxes.
 

@@ -38,3 +38,15 @@ This produced a focused addition to references/design-review.md. It did not requ
 Bookmark taps, return-to-root actions and persistent saved state were not executed by the available bounded transport. VoiceOver, measured hit regions, keyboard access, reduced transparency/motion, long translations, Android, web, store binaries and backend behavior remain unverified.
 
 The tablet is intentionally sparse; the owner should assess density, hierarchy, typography and cover treatment before any subjective choice becomes reusable guidance. This trial does not prove the skills improve every generated app. The broader 15-scenario behavioral set remains unevaluated.
+
+## Owner feedback: adjacent settings rows
+
+The owner found the initial Settings rows looked like separately rounded cards. The page already used inset grouped; explicit row backgrounds opted those rows out of continuous grouping. Static validation and the prior review did not catch that visual defect.
+
+The corrected authoring removes row surface overrides, uses a real footer role and draws one divider between the two switches. Native light/dark, larger-text and iPad portrait/landscape exports show one shared outer contour. Eight focused native callback/text-size exports pass, including the switch effects on dependent pages. The footer remains caption-sized in the largest-text export, so full text adaptation is not established.
+
+Corrected default revision: 6c52d61baf9502f375d7da78c71a3187ddda9a581e6301028347c719099d309c
+
+Corrected empty-example revision: 184bbc45b0b5171a9b361f4204c60673e9e41fa973aee0a6610a86587c3fc5d4
+
+The reusable guidance lives in native-design.md, linked from the worked example. The new settings-grouping scenario brings the set to 16; this guided author-run correction does not establish a blind evaluation of that set.

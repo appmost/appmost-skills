@@ -148,5 +148,16 @@
       "Use a split only for a compact selection-to-detail task.",
       "Review actual supported wider geometry and navigation."
     ]
+  },
+  {
+    "id": "settings-grouping",
+    "skill": "appmost",
+    "prompt": "Build a settings page with two related toggles and supporting text beneath the group.",
+    "expected": [
+      "Use the page's inset grouped style with neutral ordinary rows, or one parent container with child rows per intentionally custom group.",
+      "Inspect one continuous group surface with no separately rounded corners between adjacent settings.",
+      "Use an actual footer role where appropriate; keep dividers between rows and no separator after the final row.",
+      "Render light/dark and larger text, then exercise available toggle callbacks without changing their bindings."
+    ]
   }
 ]
