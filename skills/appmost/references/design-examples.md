@@ -63,3 +63,11 @@ Check repeated rendered row frames at standard and larger text, plus translated 
 A rich home page keeps full-width content with appropriate readable constraints and a deliberate composition. A compact selection list with related detail can use an eligible split layout. These are different tasks, not phone versus tablet skins.
 
 Review the actual supported wider viewport. Preserve navigation and make the main content useful without turning the page into a gallery of duplicated cards or stretching body text across the entire display.
+
+## Recipe discovery: images as content
+
+Use relevant food photography, native recipe titles and useful preparation metadata. Verify the same dish in a discovery image, a smaller collection item and recipe detail. Preserve recognizable crops in wider layouts, and update or remove a stale dark-image override when replacing the photo. Read the [asset workflow](assets-localization.md) for capability-based sourcing and file verification.
+
+## Operations: information before decoration
+
+An operations overview should make its main values, time period, chart and next action easy to find. Remove a large greeting or repeated brand block when it delays useful information. Native symbols and clear typography may be enough; adding photography is a content decision rather than a requirement to use an image tool.

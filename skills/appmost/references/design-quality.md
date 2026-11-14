@@ -30,6 +30,8 @@ Review relevant light/dark appearances, long translations, larger text and the n
 
 Treat reduced transparency, contrast and motion settings through the supported native behavior. Do not claim those states were exercised unless they were. An unavailable setting is a verification limit, not a fabricated pass.
 
+Check complete values and words at larger text sizes. A multi-column metric can wrap a currency amount into misleading fragments, and a fixed-width carousel can split a person's name inside a word. Use a supported adaptive composition or enough measure for those meanings; do not solve it by disabling text scaling, truncating a key value or assuming that natural growth alone establishes readability.
+
 ## 6. Refine and stop
 
 Rank findings by impact: unusable navigation or obscured content first, then native conventions, hierarchy/alignment, then decorative polish. Make one coherent correction batch, render again and inspect affected plus adjacent content.

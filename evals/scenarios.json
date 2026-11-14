@@ -159,5 +159,45 @@
       "Use an actual footer role where appropriate; keep dividers between rows and no separator after the final row.",
       "Render light/dark and larger text, then exercise available toggle callbacks without changing their bindings."
     ]
+  },
+  {
+    "id": "imagery-capabilities",
+    "skill": "appmost",
+    "prompt": "Improve this app's photography; this client has no image-generation tool.",
+    "expected": [
+      "Discover actual asset/search/generation capabilities rather than assuming a client or provider.",
+      "Use approved suitable existing/licensed imagery, or a concrete asset brief when appropriate files remain unavailable.",
+      "Continue independent app work and identify missing final imagery accurately."
+    ]
+  },
+  {
+    "id": "imagery-crops-and-themes",
+    "skill": "appmost",
+    "prompt": "Replace the dish photograph used in discovery, thumbnails and recipe detail.",
+    "expected": [
+      "Import and verify actual image bytes using the supported bundle workflow.",
+      "Update an intentional dark variant or remove a stale old-image override.",
+      "Inspect recognizable crops in the real narrow and wider image owners, keeping native labels and controls separate."
+    ]
+  },
+  {
+    "id": "data-first-utility",
+    "skill": "appmost",
+    "prompt": "Polish a roastery operations overview with sales, orders and a daily chart.",
+    "expected": [
+      "Prioritize meaningful values, units, time context and next actions.",
+      "Use native symbols and add imagery only when it contributes relevant information.",
+      "Check whole currency values and labels at larger text; remove redundant greeting/brand blocks where they delay useful content."
+    ]
+  },
+  {
+    "id": "focused-large-starter-edit",
+    "skill": "appmost",
+    "prompt": "Replace two images and a title in a large native starter with many pages.",
+    "expected": [
+      "Preserve unrelated pages, IDs and bindings.",
+      "Use focused supported edits guarded by the actual source revision rather than truncated or repeatedly resent full documents.",
+      "Read the saved native source back before relying on its revision for later verification."
+    ]
   }
 ]

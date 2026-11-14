@@ -28,7 +28,7 @@ Choose a coherent navigation model, then author real content and interactions wi
 
 Read [navigation and data](references/navigation-data.md) when adding links, lists, variables, integrations, form state or backend bindings. Use isolated test data where supported; do not trigger real backend writes while constructing a visual example.
 
-Read [assets and localization](references/assets-localization.md) for images, real bundle resources, source language and translated content. Declaring or binding an image is not proof that its bytes exist.
+Read [assets and localization](references/assets-localization.md) for image selection/generation, real bundle resources, source language and translated content. Choose imagery by content role and available tools; follow the host's image workflow without requiring a particular client or provider. Declaring or binding an image is not proof that its bytes exist.
 
 Represent loading, empty, populated and error states where they matter to the requested app. Preserve useful content, accessibility and functioning navigation during visual changes.
 

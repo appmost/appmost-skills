@@ -38,3 +38,9 @@ For a native-openable document, prefer a supported native starter/template copy 
 Select checks based on the changed content: structure and references; navigation; data-flow and integration bindings; assets; localization; viewport fit and UX. Report warnings according to their meaning. Layout warnings are review signals, not permission for indiscriminate normalization.
 
 Use a fresh app-owned render after the final relevant source change. Keep screenshot paths, source revision and context together. Readbacks and image inspection establish only the behavior they actually exercise.
+
+## Keep large edits focused
+
+For a small image or copy change in a large starter, send the changed fields or relevant row group through an exact-revision patch instead of resending every page. Preserve unchanged IDs and bindings. Use focused reads or programmatic handling when a payload exceeds a tool's output budget; never apply truncated JSON as a complete document.
+
+After a native save, use the saved source readback and its revision for later guarded checks. Native canonicalization can change the stored representation; a patch receipt alone does not establish the final saved bytes.
