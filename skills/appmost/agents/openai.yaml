@@ -1,0 +1,5 @@
+interface:
+  display_name: "Appmost"
+  short_description: "Build and visually review apps with Appmost MCP"
+policy:
+  allow_implicit_invocation: true

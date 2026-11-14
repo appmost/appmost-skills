@@ -1,0 +1,25 @@
+name: Validate skills
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      TMPDIR: ${{ github.workspace }}/.build/ci/tmp
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Prepare local scratch
+        run: mkdir -p .build/ci/tmp
+      - name: Validate source and standalone boundaries
+        run: python3 -B scripts/validate.py
+      - name: Test packaging and publication safeguards
+        run: python3 -B -m unittest discover -s tests -v
+      - name: Package both skills
+        run: python3 -B scripts/package.py --output .build/ci/packages

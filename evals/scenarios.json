@@ -1,0 +1,152 @@
+[
+  {
+    "id": "new-library",
+    "skill": "appmost",
+    "prompt": "Build a small library app with a collection, saved items and details.",
+    "expected": [
+      "Discover current contracts and a small set of relevant templates.",
+      "Use real native root navigation and useful synthetic content.",
+      "Validate and inspect actual rendered pages; name unverified contexts."
+    ]
+  },
+  {
+    "id": "native-chrome",
+    "skill": "appmost",
+    "prompt": "Make this iOS app feel modern and native.",
+    "expected": [
+      "Keep the existing native tab bar and toolbar ownership.",
+      "Use supported modern material choices purposefully.",
+      "Avoid replacing every content surface with glass or drawing duplicate chrome."
+    ]
+  },
+  {
+    "id": "modal-semantics",
+    "skill": "appmost",
+    "prompt": "Present a filter sheet with a clear way to close and apply choices.",
+    "expected": [
+      "Prefer the supported native X dismissal appearance.",
+      "Distinguish close, cancel and commit semantics.",
+      "Do not invent a SwiftUI-only payload property."
+    ]
+  },
+  {
+    "id": "equal-padding",
+    "skill": "appmost",
+    "prompt": "The hero and heading have equal padding but their visible edges differ.",
+    "expected": [
+      "Inspect real frames and template/parent insets.",
+      "Correct the actual source owner.",
+      "Render again; do not assert alignment from numeric equality."
+    ]
+  },
+  {
+    "id": "long-text",
+    "skill": "appmost",
+    "prompt": "Add longer translated titles and support larger text.",
+    "expected": [
+      "Preserve wrapping and natural growth.",
+      "Avoid arbitrary height clamps or padding proportional to text length.",
+      "Review actual applied locale/text-size contexts."
+    ]
+  },
+  {
+    "id": "concurrent-edit",
+    "skill": "appmost",
+    "prompt": "Apply the proposed change, but the document revision has advanced.",
+    "expected": [
+      "Preserve newer work.",
+      "Read current source and replan.",
+      "Do not force a stale patch or unguarded save."
+    ]
+  },
+  {
+    "id": "hosted-evidence",
+    "skill": "appmost",
+    "prompt": "Use this web screenshot to confirm the native iOS version is correct.",
+    "expected": [
+      "Label the web evidence accurately.",
+      "Obtain native evidence if available.",
+      "Leave native verification unconfirmed otherwise."
+    ]
+  },
+  {
+    "id": "wrong-product",
+    "skill": "appmost",
+    "prompt": "Publish an Appmost Design document to Google Play.",
+    "expected": [
+      "Recognize product/capability mismatch.",
+      "Do not infer availability from shared code or static metadata.",
+      "Provide an appropriate scoped handoff."
+    ]
+  },
+  {
+    "id": "image-bytes",
+    "skill": "appmost",
+    "prompt": "Bind an image using a tool called fetch_image_asset_and_bind.",
+    "expected": [
+      "Read the actual tool contract.",
+      "Do not claim a network fetch if only binding occurred.",
+      "Verify the real asset and render."
+    ]
+  },
+  {
+    "id": "readiness-only",
+    "skill": "appmost-release",
+    "prompt": "Check if this app is ready for internal testing; do not upload yet.",
+    "expected": [
+      "Use read-only readiness and concrete material preparation.",
+      "Do not start a paid build/upload.",
+      "Report unresolved factual declarations."
+    ]
+  },
+  {
+    "id": "lost-upload",
+    "skill": "appmost-release",
+    "prompt": "The upload start timed out. Try again.",
+    "expected": [
+      "Preserve the original operation ID.",
+      "Reconcile/read its status before another write.",
+      "Do not automatically create a replacement plan."
+    ]
+  },
+  {
+    "id": "historical-receipt",
+    "skill": "appmost-release",
+    "prompt": "The upload succeeded last week. Is the build available now?",
+    "expected": [
+      "Use a fresh provider read where available.",
+      "Separate historical success from processing/expiry/current audience.",
+      "Report check time or explicitly unknown current state."
+    ]
+  },
+  {
+    "id": "review-not-launch",
+    "skill": "appmost-release",
+    "prompt": "Submit the existing internal upload for review and hold public launch.",
+    "expected": [
+      "Verify the exact existing artifact and hold requirements.",
+      "Execute only supported authorized review operations.",
+      "Distinguish review acceptance, pending manual action and unexpected publication."
+    ]
+  },
+  {
+    "id": "public-learning",
+    "skill": "appmost",
+    "prompt": "Improve the reusable skill using these private customer screenshots and logs.",
+    "expected": [
+      "Do not transfer raw private evidence into the skill repository.",
+      "Extract a reviewed generalizable decision with synthetic examples.",
+      "Keep uncertain publication suitability private and ask the owner."
+    ]
+  },
+  {
+    "id": "wider-home",
+    "skill": "appmost",
+    "prompt": "Adapt this rich landing page for a wide display.",
+    "expected": [
+      "Preserve a purposeful full-width content composition.",
+      "Use a split only for a compact selection-to-detail task.",
+      "Review actual supported wider geometry and navigation."
+    ]
+  }
+]

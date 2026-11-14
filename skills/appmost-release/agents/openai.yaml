@@ -1,0 +1,5 @@
+interface:
+  display_name: "Appmost release"
+  short_description: "Prepare and verify Appmost app distribution"
+policy:
+  allow_implicit_invocation: true
