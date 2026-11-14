@@ -120,5 +120,55 @@ class PackageTests(unittest.TestCase):
         self.assertTrue(any("private/generated source is tracked" in item
                             for item in validate_repository(self.repo)))
 
+
+    def test_format_major_mismatch_is_detected(self):
+        path = self.repo / "skills/appmost/SKILL.md"
+        path.write_text(path.read_text().replace(
+            '  appmost-document-version: "2"', '  appmost-document-version: "3"'))
+        self.assertTrue(any("format major mismatch" in item for item in validate_repository(self.repo)))
+
+    def test_format_review_requires_an_immutable_matching_public_source(self):
+        path = self.repo / "skills/appmost/SKILL.md"
+        original = path.read_text()
+        for old, new in [
+            ("blob/ba2dd848a8ee36864fbdc4c275f8df1e22851a6c/", "blob/main/"),
+            ("/spec/2.2.0.md", "/spec/2.1.1.md"),
+        ]:
+            with self.subTest(replacement=new):
+                path.write_text(original.replace(old, new))
+                self.assertTrue(any("format reference" in item for item in validate_repository(self.repo)))
+        path.write_text(original)
+
+    def test_missing_or_invalid_review_metadata_is_detected(self):
+        path = self.repo / "skills/appmost-release/SKILL.md"
+        original = path.read_text()
+        for replacement in ["", '  appmost-format-review-date: "2026-02-30"']:
+            with self.subTest(replacement=replacement):
+                path.write_text(original.replace('  appmost-format-review-date: "2026-11-14"', replacement))
+                self.assertTrue(any("format review date" in item for item in validate_repository(self.repo)))
+
+    def test_reference_review_cannot_be_silently_promoted_to_runtime_certification(self):
+        path = self.repo / "skills/appmost/SKILL.md"
+        path.write_text(path.read_text().replace(
+            '  appmost-format-review-kind: "reference-review"',
+            '  appmost-format-review-kind: "runtime-certified"'))
+        self.assertTrue(any("format review kind" in item for item in validate_repository(self.repo)))
+
+    def test_duplicate_compatibility_metadata_is_rejected(self):
+        path = self.repo / "skills/appmost/SKILL.md"
+        path.write_text(path.read_text().replace(
+            '  appmost-document-version: "2"',
+            '  appmost-document-version: "2"\n  appmost-document-version: "3"'))
+        self.assertTrue(any("duplicate metadata key" in item for item in validate_repository(self.repo)))
+
+    def test_standalone_archive_retains_the_exact_compatibility_record(self):
+        package(self.repo, self.workspace / "compatibility-packages")
+        for skill in ["appmost", "appmost-release"]:
+            with zipfile.ZipFile(self.workspace / "compatibility-packages" / (skill + ".zip")) as archive:
+                for relative in ["SKILL.md", "references/format-compatibility.md"]:
+                    self.assertEqual(
+                        (self.repo / "skills" / skill / relative).read_bytes(),
+                        archive.read(skill + "/" + relative))
+
 if __name__ == "__main__":
     unittest.main()

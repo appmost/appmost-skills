@@ -26,6 +26,12 @@ Check the complete staged diff before committing and every outgoing commit befor
 
 Use focused pull requests after the initial bootstrap. Assign Appmost pull requests to @appfrilans and preserve other assignees. Review changes to publication guidance and release operations explicitly. CODEOWNERS requests review when GitHub review rules support it; it does not itself enforce a protected branch.
 
+## Maintain format compatibility
+
+Keep the five appmost-format/document metadata values in each changed skill accurate. The installed format-compatibility reference explains version axes, host-only major detection and same-major feature checks. Update the reviewed baseline only after reviewing a published, immutable source; match the source URL to the selected release and record the actual review date. Do not label the record as runtime-certified.
+
+Preserve the format baseline/date for unrelated wording changes. Bump the skill/package version independently when packaging changed instructions. Run repository validation, unit tests and packaging, inspect the installed reference, and record any affected behavioral checks actually executed. These offline checks do not prove a backend, renderer or release feature works.
+
 ## Updating sources
 
 Read docs/compatibility.md for the current source baseline. Fetch changing Apple and Google requirements from their official documentation at release time. Do not copy whole policy manuals into the skills or pin account-dependent eligibility thresholds in prose.

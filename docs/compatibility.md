@@ -1,6 +1,6 @@
 # Compatibility and source baseline
 
-Last reviewed: 2026-11-14. Package version: 0.1.0.
+Last reviewed: 2026-11-14. Package version: 0.1.1.
 
 ## Capability baseline
 
@@ -12,6 +12,16 @@ Last reviewed: 2026-11-14. Package version: 0.1.0.
 | Apple / Google delivery | Discover the running host's exact read, prepare, execute and status operations. | A historical job is not fresh provider availability. |
 
 Do not declare a minimum Appmost binary version from this table. Tool discovery is authoritative because clients and server deployments may differ. The .appmostapp decoder documentVersion and semantic format release are different values; ask the running contract or public format release manifest rather than copying a version from this package.
+
+## Format review baseline
+
+Both skills target documentVersion 2. Their instructions were reference-reviewed against public Appmost Project Format 2.2.0 on 2026-11-14 using [this immutable specification](https://github.com/appmost/project-format/blob/ba2dd848a8ee36864fbdc4c275f8df1e22851a6c/spec/2.2.0.md) and its matching release manifest and registry. The published specification and registry hashes matched that pinned manifest.
+
+The per-skill SKILL.md metadata is the installed compatibility record. Its format-compatibility reference travels in each standalone package: [authoring](../skills/appmost/references/format-compatibility.md) and [delivery](../skills/appmost-release/references/format-compatibility.md). The review kind is reference-review, not runtime certification. A same-major older/newer target is assessed by required features and actual host support; the reviewed release is neither a minimum nor a maximum.
+
+A host advertising only appmost-core-v2 or version 2 does not establish an exact semantic release. Keep that value unknown and inspect the relevant capability contracts. A document-major mismatch requires a supported workflow before mutation; do not automatically migrate or remove newer fields.
+
+When advancing the baseline, verify published artifacts, review affected instructions, update the pinned source/date, and run the documented checks plus relevant available synthetic behavior. Keep runtime evidence scoped to the tested source, host and renderer. Never promote a local unpublished release number or a preview smoke test into a complete compatibility claim.
 
 ## Public sources
 

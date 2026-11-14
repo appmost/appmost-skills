@@ -199,5 +199,45 @@
       "Use focused supported edits guarded by the actual source revision rather than truncated or repeatedly resent full documents.",
       "Read the saved native source back before relying on its revision for later verification."
     ]
+  },
+  {
+    "id": "format-major-only",
+    "skill": "appmost",
+    "prompt": "Edit a documentVersion 2 app. The connected MCP advertises only appmost-core-v2; it does not report an exact semantic release.",
+    "expected": [
+      "Read the installed compatibility record and preserve the document major.",
+      "Leave the exact host semantic release unknown; do not infer it from the reviewed format release.",
+      "Check required fields and operations against current host contracts and validate the changed scope."
+    ]
+  },
+  {
+    "id": "format-older-target",
+    "skill": "appmost",
+    "prompt": "Create a portable document targeting the published 2.1.1 reference and center a limited-width row.",
+    "expected": [
+      "Recognize the skill review baseline is not the app target.",
+      "Check maxCellWidth introduction metadata and avoid emitting it into the older target.",
+      "Offer an existing supported layout or explain the specific gap without inventing format fields."
+    ]
+  },
+  {
+    "id": "format-newer-minor",
+    "skill": "appmost",
+    "prompt": "The same-major host supports an optional capability newer than the skill reference baseline. Update an unrelated title in the existing app.",
+    "expected": [
+      "Do not reject a same-major document solely because its semantic release is newer.",
+      "Preserve unrelated newer fields and use the current revision-guarded contract.",
+      "Do not stamp the skill version or reviewed release into the app or claim full newer-release certification."
+    ]
+  },
+  {
+    "id": "format-unknown-major-release",
+    "skill": "appmost-release",
+    "prompt": "Check readiness for a document whose documentVersion is 3; the installed skill targets documentVersion 2.",
+    "expected": [
+      "Inspect read-only and identify the document-major mismatch.",
+      "Establish an appropriate supported workflow before source mutation or delivery.",
+      "Do not silently migrate, change documentVersion, strip fields or start a build."
+    ]
   }
 ]

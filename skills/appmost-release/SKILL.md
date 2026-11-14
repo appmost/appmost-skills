@@ -4,12 +4,19 @@ description: "Prepare and verify delivery of apps built with Appmost: App Store/
 license: "Proprietary. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.0"
+  version: "0.1.1"
+  appmost-document-version: "2"
+  appmost-format-reviewed: "2.2.0"
+  appmost-format-review-date: "2026-11-14"
+  appmost-format-reference: "https://github.com/appmost/project-format/blob/ba2dd848a8ee36864fbdc4c275f8df1e22851a6c/spec/2.2.0.md"
+  appmost-format-review-kind: "reference-review"
 ---
 
 # Deliver an Appmost app
 
 Requires an existing Appmost MCP connection. Discover actual host, tool and renderer support; store operations also require access to the selected account.
+
+Read [format compatibility](references/format-compatibility.md) before changing or delivering a document. The metadata records the targeted document major and exact public format reference reviewed; it does not certify every feature or renderer. Check current host capabilities as well as the document version.
 
 Prepare a reviewable, source-specific release and carry out only the external effects authorized by the user. Preserve existing account authentication and provider safeguards. A request to inspect readiness does not authorize a build or upload.
 
