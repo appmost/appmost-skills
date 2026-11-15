@@ -4,6 +4,10 @@ The scenarios in [scenarios.json](scenarios.json) are behavioral prompts and acc
 
 ## Run a focused evaluation
 
+For a behavior-changing staging candidate, start from its exact committed files or a retained byte snapshot in a fresh context. Verify actual skill discovery/selection, relevant reference loading and MCP calls against an isolated app. Record what the agent did, not only the final screenshot. Keep any stable comparison on a fixed main version.
+
+A generator test that appends a prompt or skill text directly to an API request bypasses skill activation and tool selection. It is useful component evidence, but is not a complete installed-skill evaluation. Passing repository CI likewise verifies structure and packaging rather than app design quality.
+
 Use an isolated synthetic Appmost project and the exact candidate skill files. Record the skill commit, host/tool availability, app source, renderer/context and the user's brief. Do not give an evaluating agent the expected answer or a suspected fix before it attempts the task.
 
 Run the relevant scenarios, inspect actual tool calls and final artifacts, and grade the observable outcome. For design, inspect the complete app page at readable size and compare measurements where available. For release safety, use synthetic read/prepare/error transcripts or a supported isolated environment; never start a real build, upload or release just to test a skill.

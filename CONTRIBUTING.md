@@ -2,7 +2,7 @@
 
 ## Publication boundary
 
-Prepare every tracked change, commit message, issue and pull request for public reading even while this repository is private. Apply this rule when updating these instructions, skill metadata and examples too.
+Prepare every tracked change, commit message and shared repository discussion for public reading even while this repository is private. Apply this rule when updating these instructions, skill metadata and examples too.
 
 Use published Appmost contracts, public documentation and synthetic fixtures. Read access to a private repository, conversation or MCP result does not authorize publishing its contents. Never include credentials, customer data, private discussions, account-specific identifiers, internal logs, signing material or confidential implementation details. Public URLs and identifiers deliberately published by their owners are acceptable.
 
@@ -24,9 +24,15 @@ Run the validation, unit-test and packaging commands in README.md. Inspect the a
 
 Check the complete staged diff before committing and every outgoing commit before pushing. Review public suitability separately from automated secret-pattern checks. Do not bypass a secret-protection rejection without explicit owner authorization. Resolve necessary changes before making a release or changing repository visibility.
 
-Routine skill wording, references, examples and maintenance updates may be committed and pushed directly to the default branch after scoped review, validation, tests and package inspection. They do not require a separate owner review or pull request unless the user requests one or repository rules require it.
+## Development and promotion
 
-Use a focused pull request when separate review is useful, especially for changes to publication safeguards, packaging or execution and release authority. Assign such pull requests to @appfrilans and preserve other assignees. Review changes to publication guidance and release operations explicitly. Direct maintenance commits do not authorize changing repository visibility, licensing, releasing packages or executing app builds, uploads or publishing. CODEOWNERS requests review when GitHub review rules support it; it does not itself enforce a protected branch.
+Use staging for development and candidate testing; main is the stable installation branch. Commit and push scoped development updates to staging so candidates are preserved across machines. Do not create pull requests or require PR reviews for this repository.
+
+Before promoting a candidate, review public suitability and the full outgoing diff, run the documented structural tests and package inspection, and run the affected behavioral checks when skill behavior changes. Record the exact tested commit or byte snapshot, renderer/context and known limitations. A one-shot API prompt comparison is a component experiment, not proof of skill discovery, reference loading or MCP use.
+
+Promote the same verified content from staging to main with a normal direct push after validation. Recheck both branch heads first; if concurrent changes require integration, preserve them and validate the affected result on staging before promotion. Never force-push, discard concurrent work or silently promote an untested variant. If repository rules prevent the direct workflow, report the exact conflict rather than opening a PR as a fallback.
+
+Review changes to publication safeguards, packaging and execution or release authority explicitly before promotion. This workflow does not authorize changing repository visibility, licensing, releasing packages or executing app builds, uploads or publishing; those operations retain their existing authorization requirements. Branches share the repository's visibility: staging is a development channel, not a private environment inside a public repository.
 
 ## Maintain format compatibility
 

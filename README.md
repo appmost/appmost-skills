@@ -30,6 +30,10 @@ Use $appmost to review the current app on a phone and tablet and fix the measure
 Use $appmost-release to prepare an internal TestFlight release; inspect readiness before starting a build.
 ```
 
+## Development channel
+
+Develop and test candidates on staging, then promote verified content to main without pull requests. The main installation URLs above remain the stable default. For candidate installation, linked local checkouts and the distinction between complete skill tests and prompt experiments, read [stable and candidate installations](docs/installation.md#stable-and-candidate-installations) and the [contribution workflow](CONTRIBUTING.md#development-and-promotion).
+
 ## What the workflows improve
 
 - Discover the connected host's actual tools and current schemas before authoring.
