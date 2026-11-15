@@ -4,7 +4,7 @@ description: "Create, edit and visually review apps through Appmost MCP, includi
 license: "Proprietary. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.2"
+  version: "0.1.3"
   appmost-document-version: "2"
   appmost-format-reviewed: "2.2.0"
   appmost-format-review-date: "2026-11-14"
@@ -40,6 +40,8 @@ Read [assets and localization](references/assets-localization.md) for image sele
 Represent loading, empty, populated and error states where they matter to the requested app. Preserve useful content, accessibility and functioning navigation during visual changes.
 
 ## Design and verify the actual result
+
+Application text must never touch, cross or straddle a visible background or border edge. Keep visible internal spacing within its actual row, card, native group or ancestor surface; count intrinsic template insets once and verify the rendered result.
 
 Use native Appmost navigation, tabs, toolbar items, menus, sheets and controls whenever they cover the interaction. Keep the platform's modern appearance and behavior, including Liquid Glass on supported iOS versions. Do not draw a second tab bar in content or duplicate system safe-area spacing. For a modal close, prefer the native X control; distinguish closing from cancelling, confirming and navigating back.
 

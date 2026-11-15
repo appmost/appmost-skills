@@ -81,3 +81,9 @@ Common generated failure: a generic heading, notice card and several equally wei
 Improvement: compose the state around its purpose, a concise explanation and one clear primary action. Carry the app's established visual character through typography, color and layout. A relevant illustration or background can support meaning, but is optional; preserve a deliberately calm utility when that fits. Keep secondary navigation subordinate and native controls readable.
 
 Check the actual signed-out or empty state, not only the populated screen.
+
+## Schedule card: text at a background boundary
+
+A time column can line up with the outside edge of a rounded card while the event title looks comfortably inset. The time still needs visible space inside the same painted surface. Moving the whole card farther from the page edge leaves that defect intact.
+
+Identify the card or native group that owns the background. Keep its outer grid fixed and correct the existing inner-padding owner, counting intrinsic template insets once. For a continuous group, preserve the joined rows and inspect the actual group contour. Check leading times, trailing values, wrapped labels and the top/bottom contour in the native render. A template that already provides sufficient inset needs no extra padding.

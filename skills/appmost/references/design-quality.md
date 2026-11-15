@@ -22,6 +22,8 @@ Inspect the boundary below controls such as filters, segmented controls and acti
 
 ## 4. Geometry
 
+Text must have visible internal clearance from every facing edge where its background or border changes. This includes leading times, trailing values, wrapped descriptions and text near rounded corners. Identify the actual painted owner: the row, card, continuous native group or ancestor. Outer margins do not create an inset inside that surface. Judge the actual text and painted bounds; zero authored padding is not proof of contact when the template already supplies an inset. Correct the existing inner-spacing owner and preserve wrapping, hit areas and the intended outer grid.
+
 Measure shared content edges, card interior versus exterior grids, image crops, repeated row frames and useful horizontal spacing. Count template/parent insets once. Use the reported unobscured content bounds and actual navigation alignment guide. Check first/last content and any floating accessory.
 
 Fix the source owner, not a screenshot. An intended shared edge needs measured evidence; when the host cannot measure it, label the visual judgment and its limits.

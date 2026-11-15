@@ -10,6 +10,8 @@ Choose navigation from the content. Rich dashboards, hero sections and multi-sec
 
 A visible edge includes safe/content bounds, ancestor spacing, row outerMargins, row contentPadding and intrinsic template insets. Count each contribution once. Equal authored padding on different templates does not prove aligned visible content.
 
+At a visible surface boundary, application text must never touch, cross or straddle the painted edge. Check every facing side against the actual row, card, native group or ancestor that paints the surface. Include time/value columns and nested text. Keep outer surface alignment and internal text clearance as separate constraints; moving the surface with outer margins does not add internal clearance. Count verified intrinsic template insets once.
+
 Give each gap one owner. A card's outside alignment and its internal content padding are separate decisions. Preserve intentional carousel peeks, icon columns and media treatment. Use the actual navigation guide where measured; do not impose one hard-coded navbar margin on every device.
 
 minCellDynamicHeight is a minimum, not the rendered height. Natural text wrapping, controls, template insets, margins and padding all matter. Let noninteractive text grow with content. Keep interactive hit areas usable; Appmost's current guidance uses at least 44 logical points. Do not enlarge every text row to a control's minimum or add padding in proportion to text length.
@@ -38,3 +40,9 @@ Where run_preview_test supports isolated input callbacks, exercise the relevant 
 Use app-owned rendering rather than desktop capture or UI automation. If the required renderer is unavailable, finish source checks and report the precise unverified visual variant.
 
 Platform reference: [Apple Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/). Fetch relevant current component guidance when a task depends on platform-specific behavior.
+
+## Surface-padding corrections
+
+Use existing inner-padding fields on the editable surface owner and render again. Preserve the card/group outer edge, natural wrapping and interactive hit areas; do not shrink or clip text to manufacture clearance. For continuous native groups, respect the group boundary and avoid inserting separate vertical gaps or rounded backgrounds between every row.
+
+Read each automatic adjustment contract. A plan that translates a whole row while conserving total padding does not add internal space against its own background. Do not use such a plan as a surface-inset fix. Use an eligible existing edit/review operation instead. If the actual painted owner or its editable spacing cannot be established, retain the source and report that specific correction as unverified; do not claim a safe automatic fix.

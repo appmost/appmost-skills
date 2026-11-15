@@ -23,3 +23,7 @@ Capture a concrete observation and its artifact before writing a new rule. Class
 Add a reusable instruction only when it changes a future decision. Put nuanced examples and component-specific details in a focused reference; keep SKILL.md as the short workflow. Preserve useful exceptions. Retest the original case and one nearby case so that a fix does not make every app look the same.
 
 Do not turn every personal preference into a universal platform rule. Identify package preferences, verified Appmost contracts and external platform guidance clearly. External Apple skills can supplement a task when available; these skills must remain usable without those optional dependencies.
+
+## Text inside painted surfaces
+
+Use an isolated synthetic schedule card with a leading time, multiline description and trailing value. Review actual native text bounds against the card/group contour, including all facing edges and nested content. A correction must keep visible internal clearance without changing the outer card grid, clipping text, shrinking typography or separating a continuous native group into per-row cards. Retest an already inset template with zero authored padding to avoid double insets. Exercise available light/dark and larger-text variants and record exact coverage. A whole-row translation alone is not a passed internal-padding correction.

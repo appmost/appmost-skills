@@ -4,7 +4,7 @@ description: "Prepare and verify delivery of apps built with Appmost: App Store/
 license: "Proprietary. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.2"
+  version: "0.1.3"
   appmost-document-version: "2"
   appmost-format-reviewed: "2.2.0"
   appmost-format-review-date: "2026-11-14"
