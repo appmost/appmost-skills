@@ -24,7 +24,9 @@ Run the validation, unit-test and packaging commands in README.md. Inspect the a
 
 Check the complete staged diff before committing and every outgoing commit before pushing. Review public suitability separately from automated secret-pattern checks. Do not bypass a secret-protection rejection without explicit owner authorization. Resolve necessary changes before making a release or changing repository visibility.
 
-Use focused pull requests after the initial bootstrap. Assign Appmost pull requests to @appfrilans and preserve other assignees. Review changes to publication guidance and release operations explicitly. CODEOWNERS requests review when GitHub review rules support it; it does not itself enforce a protected branch.
+Routine skill wording, references, examples and maintenance updates may be committed and pushed directly to the default branch after scoped review, validation, tests and package inspection. They do not require a separate owner review or pull request unless the user requests one or repository rules require it.
+
+Use a focused pull request when separate review is useful, especially for changes to publication safeguards, packaging or execution and release authority. Assign such pull requests to @appfrilans and preserve other assignees. Review changes to publication guidance and release operations explicitly. Direct maintenance commits do not authorize changing repository visibility, licensing, releasing packages or executing app builds, uploads or publishing. CODEOWNERS requests review when GitHub review rules support it; it does not itself enforce a protected branch.
 
 ## Maintain format compatibility
 

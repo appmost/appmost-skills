@@ -71,3 +71,31 @@ Use relevant food photography, native recipe titles and useful preparation metad
 ## Operations: information before decoration
 
 An operations overview should make its main values, time period, chart and next action easy to find. Remove a large greeting or repeated brand block when it delays useful information. Native symbols and clear typography may be enough; adding photography is a content decision rather than a requirement to use an image tool.
+
+## Account and empty states: compose the next step
+
+Brief: someone opens account-only settings while signed out.
+
+Common generated failure: a generic heading, notice card and several equally weighted clear links, with little connection to the app around them.
+
+Improvement: compose the state around its purpose, a concise explanation and one clear primary action. Carry the app's established visual character through typography, color and layout. A relevant illustration or background can support meaning, but is optional; preserve a deliberately calm utility when that fits. Keep secondary navigation subordinate and native controls readable.
+
+Check the actual signed-out or empty state, not only the populated screen.
+
+## Schedule card: text at a background boundary
+
+A time column can line up with the outside edge of a rounded card while the event title looks comfortably inset. The time still needs visible space inside the same painted surface. Moving the whole card farther from the page edge leaves that defect intact.
+
+Identify the card or native group that owns the background. Keep its outer grid fixed and correct the existing inner-padding owner, counting intrinsic template insets once. For a continuous group, preserve the joined rows and inspect the actual group contour. Check leading times, trailing values, wrapped labels and the top/bottom contour in the native render. A template that already provides sufficient inset needs no extra padding.
+
+## Text-only editorial feature: preserve the primary action
+
+Brief: present one featured essay with title, author, reading time and excerpt; keep a visible Read action to its detail, followed by two informational saved items. No cover imagery is supplied.
+
+Give the feature its own hierarchy: a small context label if useful, a stronger multiline title, a quieter byline, a readable excerpt and one native filled Read button. Secondary items use a consistent compact list style. A badge is supporting content; do not make it a fake button. Preserve the real primary control while fixing spacing.
+
+Example starting roles on a plain phone page: 24–28pt feature title, 14pt metadata, 17pt body and 20–22pt secondary section heading. Choose an intended visible gutter, commonly 16–20pt, and budget backwards from it. A native header with an intrinsic 16pt inset needs no additional 16pt parent margin for a final 16pt edge. A standalone filled button's painted edge can share that grid while keeping its internal label padding. Icon rows retain their own icon/text columns without another parent gutter. These are illustrative role choices, not universal sizes or a frozen layout.
+
+Keep small gaps inside the feature and a larger, deliberate gap before the saved section, counting header-template spacing once. A content-sized label with heading typography can fit a compact section better than a spacious header template. Review any inherited separators when composing adjacent text rows so that one editorial block does not become an accidental ruled table. Keep required text, controls and adaptive growth.
+
+Check the source and image separately: the Read control remains visible and opens the real detail; all records remain; the feature title is stronger than a generic section label; unboxed text and the standalone button share a deliberate grid; the excerpt-to-next-section gap is intentional. Retest two independent generations and a nearby app category before treating a recipe as reliable.
