@@ -18,7 +18,7 @@ Use a small coherent type hierarchy and semantic foreground roles. Keep body cop
 
 Check actual row heights, clear section grouping and a restrained primary action. Separate content-driven height from interactive hit regions. Avoid compensating for long text with excessive padding or truncation.
 
-Inspect the boundary below filter and segmented controls, including the visible distance from the control's painted edge to the next heading, chart or metric group. Check painted-edge gaps between adjacent independent controls too, including filled or outlined buttons and input fields. Give each gap one owner using existing margins, container spacing or a spacer; preserve meaningful grouping and intentionally joined controls such as segmented controls and steppers. Judge the rendered result at normal and larger text sizes rather than applying a universal gap value. Absence of clipping alone does not establish balanced spacing.
+Inspect the boundary below controls such as filters, segmented controls and action buttons, including the visible distance from the control's painted edge to the next visible heading, chart or content group. Check actual visible neighbors when conditional content is shown or hidden; spacing owned only by a hidden block can disappear with it. Check painted-edge gaps between adjacent independent controls too, including filled or outlined buttons and input fields. Give each gap one owner using existing margins, container spacing or a spacer; preserve meaningful grouping and intentionally joined controls such as segmented controls and steppers. Judge the rendered result at normal and larger text sizes rather than applying a universal gap value. Absence of clipping alone does not establish balanced spacing.
 
 ## 4. Geometry
 
