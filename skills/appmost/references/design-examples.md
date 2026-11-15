@@ -71,3 +71,13 @@ Use relevant food photography, native recipe titles and useful preparation metad
 ## Operations: information before decoration
 
 An operations overview should make its main values, time period, chart and next action easy to find. Remove a large greeting or repeated brand block when it delays useful information. Native symbols and clear typography may be enough; adding photography is a content decision rather than a requirement to use an image tool.
+
+## Account and empty states: compose the next step
+
+Brief: someone opens account-only settings while signed out.
+
+Common generated failure: a generic heading, notice card and several equally weighted clear links, with little connection to the app around them.
+
+Improvement: compose the state around its purpose, a concise explanation and one clear primary action. Carry the app's established visual character through typography, color and layout. A relevant illustration or background can support meaning, but is optional; preserve a deliberately calm utility when that fits. Keep secondary navigation subordinate and native controls readable.
+
+Check the actual signed-out or empty state, not only the populated screen.
