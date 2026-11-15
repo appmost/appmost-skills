@@ -60,7 +60,7 @@ Check the current schema/contract for these existing concepts before editing. Na
 
 The reported content bounds account for native navigation, tab bars, supported accessories and sticky content in that preview. Treat that as the baseline. Do not add a guessed tabbar-height spacer or another hardware safe-area inset to every row.
 
-For short decision, onboarding or account screens, prefer a supported native pinned action area when primary and subordinate secondary actions should stay reachable while content scrolls. Discover the current host fields and count the actual footer and safe-area clearance once so the last content scrolls clear. Check long text, accessibility sizes, keyboard and compact heights; use a supported adaptive fallback if the footer would consume the viewport. Keep contextual list actions with their content.
+For short decision, onboarding or account screens, prefer a supported native pinned action area when primary and subordinate secondary actions should stay reachable while content scrolls. Discover the current host fields and count the actual footer and safe-area clearance once so the last content scrolls clear. Verify that its rendered background also shields scrolled content through the bottom safe area. Check long text, accessibility sizes, keyboard and compact heights; use a supported adaptive fallback if the footer would consume the viewport. Keep contextual list actions with their content.
 
 Background imagery may extend under translucent chrome while readable content and tappable controls remain clear. These are different layout decisions. Check the first and last scrollable rows, keyboard/form state and any active player/accessory in the actual render.
 
