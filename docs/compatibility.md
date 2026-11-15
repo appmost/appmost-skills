@@ -1,6 +1,6 @@
 # Compatibility and source baseline
 
-Last reviewed: 2026-11-14. Package version: 0.1.1.
+Last format-reference review: 2026-11-14. The current package version is recorded in [plugin.json](../plugin.json), independently of this format-review baseline.
 
 ## Capability baseline
 
