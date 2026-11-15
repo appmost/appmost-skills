@@ -39,6 +39,8 @@ Check both the width and height of the image owner. A fixed phone-height hero st
 
 Photographs can usually keep their natural colors in both appearances while surrounding UI adapts. When replacing an asset, update a deliberate darkModeTarget variant too, or remove that stale override if the same new photograph should serve both appearances. Do not silently show the previous image in dark mode.
 
+For freestanding illustrations intended to blend into light, dark or colored canvases, honor a request for transparency with a real alpha channel; do not use a baked background matte or a white card as a substitute dark-mode fix. Inspect the actual bundled asset's alpha and semitransparent edges for halos against those surfaces, and verify which native image, row or page owns the visible background. If the motif needs an opaque backdrop or transparency does not work for the composition, use a deliberate separate dark variant and review both appearances.
+
 Review the actual decoded image, visible subject, stretching, crop, native text/overlay contrast and relevant light/dark/wider contexts. Check carousel bounds and intentional peeks after changing a parent width. Use an existing clipping option only when the composition requires it and its behavior is verified.
 
 Validate actual file references and confirm the final native render. Treat file assets, native icon names and navigation targets according to their types; a broad validator's error is not a reason to create fake image files for page IDs or symbols. Check actual file presence even when a validator reports success. Preserve unresolved tool findings and report the independent evidence accurately.
