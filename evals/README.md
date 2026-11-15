@@ -27,3 +27,11 @@ Do not turn every personal preference into a universal platform rule. Identify p
 ## Text inside painted surfaces
 
 Use an isolated synthetic schedule card with a leading time, multiline description and trailing value. Review actual native text bounds against the card/group contour, including all facing edges and nested content. A correction must keep visible internal clearance without changing the outer card grid, clipping text, shrinking typography or separating a continuous native group into per-row cards. Retest an already inset template with zero authored padding to avoid double insets. Exercise available light/dark and larger-text variants and record exact coverage. A whole-row translation alone is not a passed internal-padding correction.
+
+## Composition and control preservation
+
+Freeze the content and required visible affordances before comparing prompts. If the user values a primary Read/Book/Continue button, require its presence and real target in every arm; a different tap route does not establish parity. Keep the brief, capabilities and source fixed within a pair, retain all repetitions and report any later brief change.
+
+Exercise a no-image editorial page with one featured item and secondary records. Inspect the feature's title/byline/body hierarchy, the visible primary button, actual header/text/icon/button edges, inherited separators, content-driven row heights and the section gap after the excerpt or action. A page that merely loses imagery, buttons, color or meaningful emphasis has not demonstrated better craft. Include an independently generated repeat and a nearby category; identify recipe-specific evidence and untested adaptation honestly.
+
+Report structural acceptance, visual judgment and user preference as separate outcomes. Label contact sheets as schema/generator checks when that is all that ran. Zero automatic layout warnings does not establish attractive composition.

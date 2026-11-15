@@ -4,6 +4,8 @@ Use this during actual image review. It is a set of decision criteria, not a req
 
 ## 1. Task and composition
 
+Map the real content roles and required visible affordances first. A featured item should have a deliberate headline, supporting metadata, description and primary action appropriate to its subject. Keep the useful button, meaningful color and recognizable emphasis while correcting geometry. A text-only brief can draw character from typography and composition; it does not require reducing its main item to the same small icon row as the secondary list.
+
 Can someone identify the screen's purpose, current location and next useful action? Does the composition fit its actual content and app category? Name the one characteristic visual choice: relevant imagery, a strong content hierarchy, informative data treatment or a deliberately calm utility. Remove decoration without a purpose.
 
 Avoid recurring generated defaults: identical card stacks on every page, excessive gradients, giant empty headers, arbitrary KPI tiles, ornamental eyebrows, repeated CTA buttons and glass on every surface. These can be appropriate only when they communicate real information; a generic style habit is not a reason.
@@ -21,6 +23,8 @@ Check actual row heights, clear section grouping and a restrained primary action
 Inspect the boundary below controls such as filters, segmented controls and action buttons, including the visible distance from the control's painted edge to the next visible heading, chart or content group. Check actual visible neighbors when conditional content is shown or hidden; spacing owned only by a hidden block can disappear with it. Check painted-edge gaps between adjacent independent controls too, including filled or outlined buttons and input fields. Give each gap one owner using existing margins, container spacing or a spacer; preserve meaningful grouping and intentionally joined controls such as segmented controls and steppers. Judge the rendered result at normal and larger text sizes rather than applying a universal gap value. Absence of clipping alone does not establish balanced spacing.
 
 ## 4. Geometry
+
+Choose a final visible grid, then subtract verified template/ancestor contributions. Check the painted outside edge of a standalone button against unboxed text and headings, separately from the centered button label. Header and icon-row templates can already contain side insets; another matching outer margin can double them. Review the distance between actual text bounds across a section boundary: a header's intrinsic top spacing plus minimum height plus an authored margin can create a large hole even when each value seems modest. Use a supported content-sized label when a heading template's built-in rhythm does not fit; keep control hit areas and natural wrapping.
 
 Text must have visible internal clearance from every facing edge where its background or border changes. This includes leading times, trailing values, wrapped descriptions and text near rounded corners. Identify the actual painted owner: the row, card, continuous native group or ancestor. Outer margins do not create an inset inside that surface. Judge the actual text and painted bounds; zero authored padding is not proof of contact when the template already supplies an inset. Correct the existing inner-spacing owner and preserve wrapping, hit areas and the intended outer grid.
 
