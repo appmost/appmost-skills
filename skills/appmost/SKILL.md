@@ -4,7 +4,7 @@ description: "Create, edit and visually review apps through Appmost MCP, includi
 license: "Proprietary. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.1"
+  version: "0.1.2"
   appmost-document-version: "2"
   appmost-format-reviewed: "2.2.0"
   appmost-format-review-date: "2026-11-14"
