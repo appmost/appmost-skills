@@ -2,6 +2,8 @@
 
 Practical agent workflows for creating, reviewing and delivering apps through Appmost's MCP tools.
 
+**Beta:** these workflows have passed package checks and selected native app trials. The full behavioral evaluation is still in progress; app output needs visual review.
+
 | Skill | Use it for |
 | --- | --- |
 | [appmost](skills/appmost/SKILL.md) | Build and edit Appmost apps; choose components; connect navigation and data; validate and improve actual rendered pages. |
@@ -20,7 +22,7 @@ Install the appmost skill from https://github.com/appmost/appmost-skills/tree/ma
 Install the appmost-release skill from https://github.com/appmost/appmost-skills/tree/main/skills/appmost-release
 ```
 
-The repository is initially private, so installation requires GitHub access. For other Agent Skills hosts, install the complete selected skill directory using that host's supported mechanism. Read [installation](docs/installation.md) for local folders, private-repository access and the optional plugin package. Licensing follows the revision you install; consult its included license.
+For other Agent Skills hosts, install the complete selected skill directory using that host's supported mechanism. Read [installation](docs/installation.md) for local folders, authenticated access where required and the optional plugin package. Licensing follows the revision you install; consult its included license.
 
 Example requests:
 

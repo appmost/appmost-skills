@@ -4,7 +4,7 @@
 
 Install skills/appmost and optionally skills/appmost-release using your agent host's Agent Skills installer. Install each complete directory, including references and agents metadata. Do not install the repository root as a skill, and do not copy only SKILL.md.
 
-For Codex, use the installer prompts in README.md. Private-repository installation uses your existing authenticated GitHub access. Never put a token in a skill, Git URL, shell history or configuration committed to this repository. If access fails, resolve the account permission through the supported GitHub login flow.
+For Codex, use the installer prompts in README.md. If the repository is private, installation requires your existing authenticated GitHub access; public access does not require an invitation. Never put a token in a skill, Git URL, shell history or configuration committed to this repository. If authenticated access fails, resolve the account permission through the supported GitHub login flow.
 
 Read the license included with the branch, revision or package you install. This revision's [limited use license](../LICENSE) permits free Appmost work, including commercial customer apps and processing by AI hosts on your behalf; it restricts republication and competing-product use. Repository access, permitted use and Appmost product/account terms are separate. A license change on staging reaches the stable installation channel only when that revision is promoted to main.
 
