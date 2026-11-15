@@ -1,10 +1,10 @@
 ---
 name: appmost
 description: "Create, edit and visually review apps through Appmost MCP, including .appmostapp projects, row templates, navigation, data bindings and localization. Use for apps built with Appmost; not for developing the Appmost editor or for Appmost Design workflows."
-license: "Proprietary. See LICENSE.txt."
+license: "Appmost Skills Limited Use License 1.0. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.4"
+  version: "0.1.5"
   appmost-document-version: "2"
   appmost-format-reviewed: "2.2.0"
   appmost-format-review-date: "2026-11-14"

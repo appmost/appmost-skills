@@ -1,10 +1,92 @@
-Copyright (c) 2026 Appmost contributors. All rights reserved.
+Appmost Skills Limited Use License 1.0
 
-No open-source license is granted for this repository. Use, copying,
-modification and redistribution require separate authorization from the
-applicable rights holder. Access to a private repository does not itself
-grant redistribution rights.
+Copyright (c) 2026 Appmost AB and contributors.
+All rights reserved except as expressly granted below.
 
-The Appmost name and third-party materials remain subject to their
-respective owners' rights. Links to external documentation do not include
-or relicense that documentation.
+1. Scope
+
+This license covers the instructions, documentation, examples and helper code
+provided with it in the Appmost skills repository or an official skill package
+(the "Material"), except material identified as separately licensed. Each
+copyright holder grants only rights they own or are authorized to license.
+"Appmost" means Appmost AB's app-building platform and its associated tools,
+including its MCP integration. "You" includes an individual or organization.
+
+2. Free use with Appmost
+
+Subject to these terms, you may use, download, install, run, make private copies
+of and privately modify the Material without a license fee, solely for work
+with Appmost. This includes designing, building, testing, maintaining and
+releasing apps, integrating with Appmost, and using its MCP tools.
+
+Personal, internal, professional and commercial Appmost work is permitted,
+including paid work building apps for customers. You may make private copies
+available to your employees, contractors and service providers, including AI
+agent hosts, solely to perform that permitted work on your behalf. This does
+not permit those recipients to republish the Material or reuse it for their
+own products. You may also submit proposed changes directly to Appmost AB.
+
+3. Uses requiring prior written permission
+
+Except for the private sharing expressly allowed in section 2 and the rights
+preserved in section 6, you must obtain prior written permission from
+Appmost AB and, where applicable, any other relevant copyright holder before:
+
+(a) republishing, redistributing, sublicensing, selling or otherwise making
+the Material or adaptations of it available to others, including through a
+separate repository, marketplace, course, package, product or service; or
+
+(b) using or incorporating the Material or adaptations of it to develop,
+power, improve or operate a competing product or service. A competing product
+or service is one offered as a substitute for Appmost as an app-building,
+app-generation or app-editing platform or service.
+
+Ordinary apps built with Appmost, and professional services building those
+apps for customers, are not competing products or services merely because
+they are commercial or compete with other apps in their own market.
+
+For permission requests, contact Appmost AB through
+https://www.appmost.ai/contact/.
+
+4. Your apps and other output
+
+This license does not claim ownership of your prompts, data, apps or other
+output. You may use, deliver, publish, distribute and commercialize apps,
+configuration, code, assets and content created through permitted Appmost
+work, including example code incorporated into those apps, without applying
+this license or displaying a skill-license attribution in the app.
+
+This output permission does not authorize republishing the skill files,
+reference documentation or helper tooling themselves, including by packaging
+them as output. Those copies and adaptations remain Material under this
+license. Other rights in your output, including third-party rights, remain
+subject to their own applicable terms.
+
+5. Notices and separate rights
+
+Keep this license and the applicable copyright notices with permitted copies
+and adaptations of the Material. Private modifications do not grant you the
+right to distribute adaptations. Rights under this license are conditional
+on compliance with its terms; all other rights are reserved.
+
+This license does not grant access to an Appmost account or license the
+Appmost product itself. Product and service terms and fees apply separately.
+It grants no trademark or endorsement rights. Third-party materials retain
+their own terms; links to external documentation do not relicense it.
+
+6. Applicable law and hosting terms
+
+Nothing here limits rights you have under applicable law or directly under
+repository-hosting terms accepted by the relevant rights holder. For example,
+if this repository is made public on GitHub, GitHub's terms allow viewing and
+forking within GitHub. This license does not extend those hosting permissions
+to external republication or use in competing products or services.
+
+7. Warranty and liability
+
+To the extent permitted by applicable law, the Material is provided "as is"
+and "as available", without warranties of any kind, including merchantability,
+fitness for a particular purpose and non-infringement. To that same extent,
+the copyright holders are not liable for claims, damages or other liability
+arising from the Material or its use. These exclusions do not limit liability
+that cannot lawfully be excluded.

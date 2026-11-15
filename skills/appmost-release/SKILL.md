@@ -1,10 +1,10 @@
 ---
 name: appmost-release
 description: "Prepare and verify delivery of apps built with Appmost: App Store/TestFlight and Google Play readiness, store material, exact build evidence, and explicitly authorized uploads or publishing. Use for Appmost customer-app releases; not Appmost Design releases or ordinary app layout editing."
-license: "Proprietary. See LICENSE.txt."
+license: "Appmost Skills Limited Use License 1.0. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.4"
+  version: "0.1.5"
   appmost-document-version: "2"
   appmost-format-reviewed: "2.2.0"
   appmost-format-review-date: "2026-11-14"

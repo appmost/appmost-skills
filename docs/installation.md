@@ -6,6 +6,8 @@ Install skills/appmost and optionally skills/appmost-release using your agent ho
 
 For Codex, use the installer prompts in README.md. Private-repository installation uses your existing authenticated GitHub access. Never put a token in a skill, Git URL, shell history or configuration committed to this repository. If access fails, resolve the account permission through the supported GitHub login flow.
 
+Read the license included with the branch, revision or package you install. This revision's [limited use license](../LICENSE) permits free Appmost work, including commercial customer apps and processing by AI hosts on your behalf; it restricts republication and competing-product use. Repository access, permitted use and Appmost product/account terms are separate. A license change on staging reaches the stable installation channel only when that revision is promoted to main.
+
 For repository-scoped Codex use, place each skill directory under the target project's `.agents/skills/`. User-wide discovery is available under `~/.agents/skills/`; the built-in installer may manage its own supported installation directory. Follow the installed client's documentation instead of writing global configuration from a skill. Avoid installing the same skill through both standalone and plugin routes.
 
 For a local test, the ZIPs produced by scripts/package.py contain one top-level skill directory each. Extract them with your host's supported process into a chosen test project. The ZIPs are skill artifacts, not plugin submission bundles.

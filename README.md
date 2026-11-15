@@ -20,7 +20,7 @@ Install the appmost skill from https://github.com/appmost/appmost-skills/tree/ma
 Install the appmost-release skill from https://github.com/appmost/appmost-skills/tree/main/skills/appmost-release
 ```
 
-The repository is initially private, so installation requires GitHub access and authorization from the rights holder. All rights are reserved; no open-source license is granted. For other Agent Skills hosts, install the complete selected skill directory using that host's supported mechanism. Read [installation](docs/installation.md) for local folders, private-repository access and the optional plugin package.
+The repository is initially private, so installation requires GitHub access. For other Agent Skills hosts, install the complete selected skill directory using that host's supported mechanism. Read [installation](docs/installation.md) for local folders, private-repository access and the optional plugin package. Licensing follows the revision you install; consult its included license.
 
 Example requests:
 
@@ -47,6 +47,16 @@ The appmost skill includes native-control preferences, modern iOS Liquid Glass g
 Both skills include an installed format compatibility record: targeted document major, exact reviewed public format release, review date, evidence scope and immutable source. That review baseline is separate from the skill version and the running host's capabilities. Read [compatibility](docs/compatibility.md) for the current baseline and update process.
 
 The skills use public MCP contracts and synthetic examples. They neither copy the full format specification nor guarantee that a renderer, backend or store review will succeed.
+
+## License
+
+This revision uses the [Appmost Skills Limited Use License 1.0](LICENSE), a custom restricted license, not an open-source license.
+
+- Use with Appmost is free, including professional and commercial work building apps for customers. Private adaptations and processing by AI hosts acting on your behalf are allowed for that purpose.
+- Republishing or redistributing the skill material, and using it in a competing app-building, app-generation or app-editing product or service, requires prior written permission from Appmost AB and any other applicable rights holder.
+- Apps and other output you create through permitted use can be distributed and commercialized without adopting this skill license. Redistributing the skill files, reference documentation or helper tooling themselves remains restricted.
+
+The license does not make Appmost subscriptions or third-party services free. See the full license for its scope and conditions. If the repository becomes public, [GitHub's hosting terms](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) still permit viewing and forking within GitHub. This license does not expand those platform permissions into broader reuse rights.
 
 ## Validate and package
 

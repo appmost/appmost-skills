@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "appmost",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Build, visually review and deliver apps through Appmost MCP."
 }

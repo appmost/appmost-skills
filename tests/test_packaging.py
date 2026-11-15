@@ -46,12 +46,28 @@ class PackageTests(unittest.TestCase):
                 names = archive.namelist()
                 self.assertIn(f"{skill}/SKILL.md", names)
                 self.assertIn(f"{skill}/LICENSE.txt", names)
+                self.assertEqual((self.repo / "LICENSE").read_bytes(),
+                                 archive.read(f"{skill}/LICENSE.txt"))
                 self.assertTrue(all(name.startswith(skill + "/") for name in names))
                 self.assertFalse(any("private-notes" in name or "CONTRIBUTING" in name for name in names))
                 extracted = self.workspace / f"installed-{skill}"
                 archive.extractall(extracted)
                 for page in (extracted / skill).rglob("*.md"):
                     self.assertEqual([], check_links(page, extracted / skill))
+
+    def test_mismatched_skill_license_is_rejected_before_packaging(self):
+        for skill in ("appmost", "appmost-release"):
+            with self.subTest(skill=skill):
+                path = self.repo / "skills" / skill / "LICENSE.txt"
+                original_license = path.read_bytes()
+                path.write_text("Synthetic different license.\n")
+                errors = validate_repository(self.repo)
+                self.assertIn(f"{skill}: packaged license differs from repository license", errors)
+                output = self.workspace / f"blocked-license-{skill}"
+                with self.assertRaises(CheckError):
+                    package(self.repo, output)
+                self.assertFalse(output.exists())
+                path.write_bytes(original_license)
 
     def test_repeated_packages_have_identical_bytes_despite_source_mtime(self):
         one = package(self.repo, self.workspace / "one")
