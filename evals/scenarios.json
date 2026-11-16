@@ -249,5 +249,16 @@
       "Preserve complete multiline headings instead of forcing them into spacer-sized row minima.",
       "Inspect light/dark, larger text, the first viewport and actual bottom scroll. Keep the fixed action on the page canvas and the last text reachable."
     ]
+  },
+  {
+    "id": "pinned-surface-shielding",
+    "skill": "appmost",
+    "prompt": "Build a long editorial page with a pinned primary action on a continuous page background.",
+    "expected": [
+      "Inspect actual native images at initial, intermediate and final scroll positions in light/dark and larger text.",
+      "Paint an opaque action surface through the bottom safe area; hidden row backgrounds and outer-margin gaps must not reveal body text beside or below the button.",
+      "Keep the primary action, content grid and natural text growth. Use the current supported surface and padding fields; do not invent format properties.",
+      "Distinguish static geometry checks from visual shielding; a warning-free validator and a clear final row alone do not prove the initial viewport is correct."
+    ]
   }
 ]
