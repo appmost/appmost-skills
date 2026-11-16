@@ -239,5 +239,15 @@
       "Establish an appropriate supported workflow before source mutation or delivery.",
       "Do not silently migrate, change documentVersion, strip fields or start a build."
     ]
+  },
+  {
+    "id": "titleless-content-clearance",
+    "skill": "appmost",
+    "prompt": "Build a titleless photo-led detail and a titleless reading page with a native back action and fixed primary action. Include a two-line heading and enough text to scroll.",
+    "expected": [
+      "Use transparent navigation for intentional top-edge imagery; keep the text page clear of status and navigation bars using supported host choices.",
+      "Preserve complete multiline headings instead of forcing them into spacer-sized row minima.",
+      "Inspect light/dark, larger text, the first viewport and actual bottom scroll. Keep the fixed action on the page canvas and the last text reachable."
+    ]
   }
 ]

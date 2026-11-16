@@ -30,11 +30,13 @@ Inspect at least two adjacent settings rows together. They should share one cont
 
 ## Titleless navigation and top-edge images
 
-Prefer a transparent header when a page has no visible navigation title, especially over a leading image that reaches the top edge. This is an Appmost authoring preference: preserve useful titles on ordinary lists/settings and meaningful page/tab labels. Keep native Back/Close actions instead of hiding the whole navigation bar.
+Prefer a transparent header over leading imagery intended to reach the top edge. A hidden navigation title alone does not establish that text can flow behind system bars. Preserve useful titles on ordinary lists/settings and meaningful page/tab labels. Keep native Back/Close actions instead of hiding the whole navigation bar.
 
-Discover the existing fields in the current schema. Native V2 uses `appearance.navBarAppearance: "transparent"` and can keep its semantic `title` while setting `appearance.showTitle: false`. For fully transparent top-edge media, use `listProperties.hideTopScrollEdgeEffect: true` to remove the automatic top gradient. Use `listProperties.ignoreTopSafeArea: true` only for imagery intended behind the bars; a titleless text/form page retains normal safe-area clearance. Generated-page DTO names differ: use `navBarAppearance`, `ignoreTopSafeArea`, and `hideTopScrollEdgeEffect` only when the advertised capability/schema supports them.
+Discover the existing fields in the current schema. Native V2 uses `appearance.navBarAppearance: "transparent"` and can keep its semantic `title` while setting `appearance.showTitle: false`. For fully transparent top-edge media, use `listProperties.hideTopScrollEdgeEffect: true` to remove the automatic top gradient. Use `listProperties.ignoreTopSafeArea: true` only for imagery intended behind the bars. In native list hosts, transparent navigation can itself remove the top safe area even when that flag is false. For titleless text/forms, retain normal navigation (`"o"`) with `showTitle: false` when needed for readable clearance; verify the actual first rows. Do not compensate with a hard-coded status-bar spacer. Generated-page DTO names differ: use `navBarAppearance`, `ignoreTopSafeArea`, and `hideTopScrollEdgeEffect` only when the advertised capability/schema supports them.
 
 Inspect the first viewport and scrolled content in light/dark and larger text. Preserve readable status text and native actions with an intentional contrast treatment or an explicit material exception when necessary; do not insert an empty opaque band by default.
+
+Do not give multiline headings a tiny, spacer-sized row minimum: some native label templates treat that as a compact single-line mode, even with explicit newlines. Keep a content-appropriate minimum and inspect the rendered heading.
 
 ## Liquid Glass on supported iOS
 
