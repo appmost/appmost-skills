@@ -28,6 +28,14 @@ For a group that needs custom composition or a custom surface, use one container
 
 Inspect at least two adjacent settings rows together. They should share one continuous surface, with rounded corners only on the group's outer contour. Check the group boundary, footer and separator alignment in light/dark and larger text.
 
+## Titleless navigation and top-edge images
+
+Prefer a transparent header when a page has no visible navigation title, especially over a leading image that reaches the top edge. This is an Appmost authoring preference: preserve useful titles on ordinary lists/settings and meaningful page/tab labels. Keep native Back/Close actions instead of hiding the whole navigation bar.
+
+Discover the existing fields in the current schema. Native V2 uses `appearance.navBarAppearance: "transparent"` and can keep its semantic `title` while setting `appearance.showTitle: false`. For fully transparent top-edge media, use `listProperties.hideTopScrollEdgeEffect: true` to remove the automatic top gradient. Use `listProperties.ignoreTopSafeArea: true` only for imagery intended behind the bars; a titleless text/form page retains normal safe-area clearance. Generated-page DTO names differ: use `navBarAppearance`, `ignoreTopSafeArea`, and `hideTopScrollEdgeEffect` only when the advertised capability/schema supports them.
+
+Inspect the first viewport and scrolled content in light/dark and larger text. Preserve readable status text and native actions with an intentional contrast treatment or an explicit material exception when necessary; do not insert an empty opaque band by default.
+
 ## Liquid Glass on supported iOS
 
 Modern standard bars and controls adopt the platform appearance through the host/runtime. Let that native layer own its material. Keep ordinary content surfaces, cards and lists readable and restrained; a modern app does not need glass on every section.
