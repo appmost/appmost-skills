@@ -10,6 +10,8 @@ Use ordinary pages and existing actions for stack/tab navigation. Reserve panel 
 
 Choose root or page scope deliberately. Verify each binding against a declared variable, object model, integration and operation. Use supported upsert/binding tools and validate_data_flow_bindings or the current equivalent. A declaration is not proof of a successful request or a parsed response.
 
+For repeated-row selection, do not assume that a similarly named root variable receives the selected item. Check the host's selection scope. Use distinct names for the row selection and shared destination state; pass the selected object through existing navigation parameters or explicitly copy it before navigation. Verify two different items and a missing selection. A separately populated destination fixture does not test that transfer.
+
 Keep authored form values, preview values, persistent backend state and test fixtures distinct. Preserve loading, empty, error and populated states where they affect the user's flow. Do not insert real credentials, sensitive customer records or production-only identifiers into a demonstration.
 
 ## Backend work
