@@ -12,7 +12,7 @@ Avoid recurring generated defaults: identical card stacks on every page, excessi
 
 ## 2. Platform and behavior
 
-Use native navigation, tab bars, modal dismissal, menus and available controls. Check that no custom content duplicates system chrome. Verify that X, back, cancel and confirm perform their distinct intended actions. On iOS prefer the platform's modern material when available; other platforms retain their own native conventions.
+Use native navigation, tab bars, modal dismissal, menus and available controls. Check that no custom content duplicates system chrome. Verify that X, back, cancel and confirm perform their distinct intended actions. Compare each top-bar icon and accessible name with its actual destination; follow [top-bar actions and destinations](navigation-data.md#top-bar-actions-and-destinations) rather than assuming an icon is truthful. On iOS prefer the platform's modern material when available; other platforms retain their own native conventions.
 
 ## 3. Hierarchy and density
 

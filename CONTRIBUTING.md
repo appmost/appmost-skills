@@ -12,7 +12,7 @@ There is intentionally no AGENTS.md or private instruction overlay in this initi
 
 ## Change the right layer
 
-Keep workflow decisions in SKILL.md. Put substantial task-specific detail in references linked from that skill. A skill must remain useful when installed alone: do not link to sibling skills or repository-only documentation for required runtime instructions.
+Before adding a rule, use [guidance placement](docs/skill-design.md#where-guidance-belongs) to choose its owner and affected consumers. Keep workflow decisions in SKILL.md. Put substantial task-specific detail in references linked from that skill. A skill must remain useful when installed alone: do not link to sibling skills or repository-only documentation for required runtime instructions.
 
 Prefer current MCP discovery over copied tool schemas. Tool names in guides are examples whose availability must be checked. Update a guide only against the relevant runtime contract; do not infer shipping availability from a source branch or product name.
 

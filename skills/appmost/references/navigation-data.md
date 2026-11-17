@@ -6,6 +6,16 @@ Use stable page/row/action IDs returned or accepted by the current contract. For
 
 Use ordinary pages and existing actions for stack/tab navigation. Reserve panel replacement routing for an intentionally selected detail inside an eligible split container. Do not create a parallel menu hierarchy or new serialized navigation fields to express unsupported behavior.
 
+## Top-bar actions and destinations
+
+Match an action's symbol and accessible name to what it actually does. A notification bell must open a real notification experience, never act as a disguised shortcut to Profile or another tab. Omit optional utility actions when the app has no useful matching destination; do not invent messages, unread badges or empty feature shells to justify an icon.
+
+For a short, self-contained utility opened from the top bar, prefer a native modal sheet or supported popover that returns to the same context on dismissal. A notification inbox or filter task can fit this pattern when it has real content and a clear exit. Prefer push navigation for an actual detail in the current hierarchy, and a menu for immediate commands. Back, Close, Save and in-place actions retain their own semantics. Do not convert every top-bar action into a modal or add one merely because a button is in the navigation bar.
+
+Keep peer sections in the tab bar or sidebar. An explicit, clearly labelled cross-link may select a tab when the flow needs it; do not push a duplicate tab root or use an unrelated utility symbol. Check the action destination and return path in addition to the screenshot. Respect an existing navigation choice during layout-only work; propose a flow correction separately when it changes behavior.
+
+This is a design recommendation, not a format requirement or automatic rewrite. Use the host's existing presentation fields and native dismissal controls. Apple's [modality guidance](https://developer.apple.com/design/human-interface-guidelines/modality) limits modal presentation to a clear task benefit; its [toolbar guidance](https://developer.apple.com/design/human-interface-guidelines/toolbars) distinguishes actions and hierarchical navigation from top-level tab navigation.
+
 ## Variables and bindings
 
 Choose root or page scope deliberately. Verify each binding against a declared variable, object model, integration and operation. Use supported upsert/binding tools and validate_data_flow_bindings or the current equivalent. A declaration is not proof of a successful request or a parsed response.
