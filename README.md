@@ -29,7 +29,7 @@ Example requests:
 ```text
 Use $appmost to build a small library app with a searchable list and a detail page.
 Use $appmost to review the current app on a phone and tablet and fix the measured layout issues.
-Use $appmost-release to prepare an internal TestFlight release; inspect readiness before starting a build.
+Use $appmost-release to prepare TestFlight for internal testers with an App Store-eligible build; inspect readiness before starting a build.
 ```
 
 ## Development channel

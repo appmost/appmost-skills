@@ -6,7 +6,11 @@ Inspect the Appmost project's final source, app/bundle identity, version/build, 
 
 Fetch the relevant current [App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/) and [App Store Connect Help](https://developer.apple.com/help/app-store-connect/) for the app's features and requested release. Verify completeness, accurate metadata and review access. Claims about privacy, payments or account behavior must match the actual app and its integrations; unresolved declarations require the owner's factual input.
 
-## Internal TestFlight through Appmost
+## TestFlight through Appmost
+
+Resolve two independent choices before preparation: the authorized tester audience (internal or external) and export eligibility (`APP_STORE_ELIGIBLE` or `INTERNAL_ONLY`). Follow the user's instructions and workspace policy. A request for internal testers does not itself select the restricted internal-only export.
+
+When App Store eligibility is required, explicitly pass `allowAppStorePublicRelease: true` to both testflight_prepare_current_project and testflight_publish_current_project. Verify the prepared summary and Apple's processed `buildAudienceType` before reporting the requested delivery complete. Do not omit the flag and rely on a default. If the selected account, plan or host cannot provide the requested eligibility, report that blocker rather than falling back to internal-only or bypassing entitlements. Use the restricted export only when the requested workflow and applicable owner policy permit it; preserve its intended availability for supported plans.
 
 When exposed, testflight_publish_status supplies readiness; testflight_prepare_current_project prepares the exact current saved source and selected organization/audience. Inspect its summary. Use testflight_publish_current_project only for an already authorized build/upload with its exact required arguments and confirmation.
 

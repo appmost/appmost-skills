@@ -4,7 +4,7 @@ description: "Prepare and verify delivery of apps built with Appmost: App Store/
 license: "Appmost Skills Limited Use License 1.0. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.7"
+  version: "0.1.8"
   appmost-document-version: "2"
   appmost-format-reviewed: "2.2.0"
   appmost-format-review-date: "2026-11-14"
@@ -22,7 +22,7 @@ Prepare a reviewable, source-specific release and carry out only the external ef
 
 ## Identify the requested outcome
 
-Determine the target app, platform, account/organization, environment, version/build and audience from the request and current read-only state. Distinguish preparation, build, internal distribution, store review and public launch. Reuse authorization already present in the conversation; ask only when a required action or destination remains unapproved or ambiguous.
+Determine the target app, platform, account/organization, environment, version/build and audience from the request and current read-only state. Distinguish preparation, build, internal distribution, store review and public launch. For Apple builds, resolve export eligibility separately from the tester audience, following the user's instructions and workspace policy; internal tester groups do not imply an internal-only export. App Store eligibility alone does not authorize review submission or public launch. Reuse authorization already present in the conversation; ask only when a required action or destination remains unapproved or ambiguous.
 
 Discover the current host's tools. A source-code capability, historical job or other Appmost product does not establish an executable tool. Read [operation safety and recovery](references/operations.md) before any build, upload, review submission, release, expiry, halt or cancellation.
 
