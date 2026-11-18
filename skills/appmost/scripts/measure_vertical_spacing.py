@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
-"""Compare selected rendered text gaps with declared targets from a review_page report."""
+"""Compare selected rendered text gaps with declared targets from a rendered Appmost layout report."""
 import argparse
 import json
 import math
 from pathlib import Path
 
 
-def bounds(node, tolerance=0.5):
-    frame = node["frame"]
-    visible = node["visibleFrame"]
+def bounds(node, *, frame_key="frame", safe_area=None, tolerance=0.5):
+    frame = node[frame_key]
     top = frame["y"]
     bottom = top + frame["height"]
-    if (frame["height"] <= 0 or visible["height"] <= 0
-            or visible["y"] - top > tolerance
-            or bottom - visible["y"] - visible["height"] > tolerance):
-        raise ValueError(f"{node['id']} is not fully visible vertically")
+    visible_frames = [node["visibleFrame"]]
+    if safe_area:
+        visible_frames.append(safe_area)
+    if (frame["height"] <= 0 or any(
+            visible["height"] <= 0 or visible["y"] - top > tolerance
+            or bottom - visible["y"] - visible["height"] > tolerance
+            for visible in visible_frames)):
+        raise ValueError(f"{node['id']} is clipped or obscured vertically")
     return top, bottom
 
 
@@ -39,21 +42,28 @@ def main():
     try:
         result = json.loads(args.report.read_text(encoding="utf-8"))
         layout = result["layout"]
-        if not result["ok"] or not layout.get("coordinateUnit"):
-            raise ValueError("Expected a successful review_page result with measured coordinates")
+        if not result["ok"] or layout.get("measurementComplete") is False or not layout.get("coordinateUnit"):
+            raise ValueError("Expected a successful Appmost render with measured coordinates")
         nodes = layout["nodes"]
+        safe_area = layout.get("safeAreaFrame")
 
         def selected(node_id, role):
             matches = [node for node in nodes if node["id"] == node_id and node["role"] == role]
             if len(matches) != 1:
                 raise ValueError(f"Expected one {role} node with ID {node_id}")
-            return bounds(matches[0])
+            return matches[0]
 
-        top, bottom = selected(args.surface, "row")
-        top += args.surface_margins[0]
-        bottom -= args.surface_margins[1]
-        lines = [[selected(node_id.strip(), "text") for node_id in line.split(",")]
-                 for line in args.line]
+        surface = selected(args.surface, "row")
+        if surface.get("paintedFrame"):
+            if any(args.surface_margins):
+                raise ValueError("The report already includes the painted edge. Omit estimated surface margins.")
+            top, bottom = bounds(surface, frame_key="paintedFrame", safe_area=safe_area)
+        else:
+            top, bottom = bounds(surface, safe_area=safe_area)
+            top += args.surface_margins[0]
+            bottom -= args.surface_margins[1]
+        lines = [[bounds(selected(node_id.strip(), "text"), safe_area=safe_area)
+                  for node_id in line.split(",")] for line in args.line]
         starts = [min(start for start, _ in line) for line in lines]
         ends = [max(end for _, end in line) for line in lines]
         measured = [start - end for start, end in zip([*starts, bottom], [top, *ends])]
