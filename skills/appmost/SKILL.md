@@ -4,7 +4,7 @@ description: "Create, edit and visually review apps through Appmost MCP, includi
 license: "Appmost Skills Limited Use License 1.0. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.10"
+  version: "0.1.11"
   appmost-document-version: "2"
   appmost-format-reviewed: "2.2.0"
   appmost-format-review-date: "2026-11-14"
@@ -53,7 +53,7 @@ Read [native design choices](references/native-design.md) for platform chrome, m
 
 Use list_preview_contexts to choose supported device, renderer, appearance, language and text size. Keep that context stable through a comparison. Prefer review_page for an image plus actual layout measurements from the same preview; use render_page or the available equivalent when measurements are unavailable.
 
-Inspect the image itself and relate findings to returned model paths and frames. Review through [the design quality checks](references/design-quality.md), prioritizing platform conventions, readable content and the screen's main task before decoration. Correct the actual source with existing properties, then render again. For supported edge/gap changes, use plan_layout_adjustment and apply_layout_adjustment without changing the returned plan. A successful static validator does not establish visual quality.
+Inspect the image itself and relate findings to returned model paths and frames. For spacing changes, declare the intended rhythm by content relationship and verify the visible gaps and card insets before and after. Use the [vertical spacing check](references/design-review.md#verify-vertical-spacing) when measured text frames are available. Review through [the design quality checks](references/design-quality.md), prioritizing platform conventions, readable content and the screen's main task before decoration. Correct the actual source with existing properties, then render again. For supported edge/gap changes, use plan_layout_adjustment and apply_layout_adjustment without changing the returned plan. A successful static validator does not establish visual quality.
 
 When implementing an approved sketch or reference, use [reference fidelity](references/reference-fidelity.md). Compare the reference with the actual native render, correct the largest discrepancies and recheck the result. Typography, composition and missing states are acceptance criteria; a successful export or a populated fixture alone does not establish a faithful, functioning app.
 

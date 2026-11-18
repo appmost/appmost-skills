@@ -29,6 +29,14 @@ Do not hide excessive spacing by clipping text or applying a small maximum heigh
 
 A stale context, unsupported row relationship or verification failure calls for fresh inspection, not a modified plan. Do not infer row indexes from visual order. Resolved x/y coordinates are measurements, not a new absolute-positioning model.
 
+## Verify vertical spacing
+
+Choose gaps by relationship before editing. A compact starting scale is 4–8 logical points for related labels and explanations, 8–12 within a group, around 16 for a card inset, and 24–32 between independent sections. Follow the app's established scale and let wrapping grow naturally. Prefer an even outer inset on a simple card. Assign spacing once to the container or the separation at that boundary. Compare the title-to-first-text gap with regular row gaps and check the distance from the final visible text to the painted bottom edge.
+
+Use the rendered text bounds in `review_page` and the frame of the row that paints the card. Verify in the matching image that floating bars and other overlays leave the selected text and card edges unobscured. In `python3 -B scripts/measure_vertical_spacing.py REPORT --surface CARD_NODE --line TITLE_NODE --line FIRST_LABEL,FIRST_VALUE --line LAST_LABEL,LAST_VALUE --expected 16 12 8 16`, replace the placeholders with exact node IDs selected from the same report. The script reads the report's logical unit and checks both text gaps and surface insets against the stated tolerance. Exit status 1 marks an out-of-tolerance measurement and status 2 marks unusable inputs, including missing or vertically clipped nodes. Supply `--surface-margins TOP BOTTOM` only when the screenshot and reported geometry establish that those margins are part of the measured row but outside the painted card. Remeasure the final revision in the same context. Use `compare_page_layout` to find unintended movement nearby when available.
+
+Inspect both the row height and its rendered content alignment if the card padding is even but visible insets differ. A noninteractive metadata row with an inherited minimum height can introduce asymmetric clearance. Use a content-sized composition while preserving readable text, wrapping, column alignment and control hit areas. Check a conditional-content variation and a narrow or larger-text context where relevant. If the target renderer only provides images, inspect its own export at the reported scale. A native layout report is evidence for that native render.
+
 ## Coverage and evidence
 
 Prioritize the narrowest supported phone, an intended wider composition, relevant light/dark appearances and long translations. Review larger system text where supported and inspect metadata for a project text-scaling lock. Use contact sheets for page coverage and individual images for detailed judgment.

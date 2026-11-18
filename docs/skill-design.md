@@ -48,3 +48,7 @@ Choose the primary owner from the table, list actual consumers and explain why e
 Validate only what changed. Structural skill checks and package inspection establish installability, not useful navigation choices. For a behavior change, use a realistic case and a nearby exception where feasible; report unexecuted model or interaction checks honestly. Do not claim an independent evaluation for a self-review or introduce a costly new pipeline solely to test a sentence.
 
 Keep entrypoints short. Split a skill when the task has a different trigger, authority boundary or outcome; file size alone does not justify another skill or router. Prefer a link and a small consumer-specific adaptation over copies that drift.
+
+### Example: repeatable spacing review
+
+The Appmost skill owns the workflow for selecting related content and verifying rendered gaps. Its design reference carries role-based starting values and the reusable measurement script reads existing evidence. Layout-only tools should show geometric deviations and propose changes to the spacing owner while preserving controls and navigation. Generator instructions can say to group related text and use content-sized rows, because an initial draft has no measured geometry. Shared policy and evaluation belong here; retain a single executable measurement implementation and verify it on synthetic rendered cases before reusing the rule in a prompt.
