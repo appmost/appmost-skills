@@ -1,40 +1,25 @@
 # Imagery and varied native examples
 
-Date: 2026-11-14. This is a guided author-run trial following owner feedback that the first library example used simplified geometric artwork. It is not an independent or blind model evaluation.
+Date: 2026-11-14. This was a guided, author-run native trial.
 
-## Three different content needs
+## Coverage
 
-| Example | Native starter | Targeted work |
-| --- | --- | --- |
-| Sunday Table | Recipe template | Two generated food photographs, longer recipe title, consistent image references across discovery/detail/cooking, and a corrected wider image composition. |
-| Coast Club | Training template | Generated studio photograph, native text over the actual photo, a fictional club identity, bounded coach carousel and readable larger-text names. |
-| Little Batch | Roastery operations template | A data-first overview with native icons/charts, removal of a redundant greeting and complete larger-text currency values. |
-
-These are adapted native starters, not three apps designed from empty projects. Unchanged subflows retain bundled template assets. Three new raster assets were generated through an available built-in tool, optimized as JPEG without changing their pixel dimensions, imported as real resources and reviewed in native output. The skill guidance is capability-based and portable across clients/providers.
+The trial exercised image consistency across views, readable content over photography, horizontal collections, and data-heavy layouts. Three generated raster assets were optimized as JPEG at their original dimensions, added as app resources and inspected in native output.
 
 ## Observed corrections
 
-- A visually good source photo became a severely cropped strip when a fixed phone-height image stretched across iPad. A coherent content width and taller image owner improved the actual crop.
-- Old darkModeTarget overrides had to be removed for the replacement recipe photographs so light/dark used the same intended new image.
-- A capped parent needed its existing clipping option reviewed for the horizontal carousel.
-- Narrow cards split names within words at the largest text size, and two-column metrics split a currency amount. Wider coach cards and a one-column metric composition preserved meaning.
-- A large welcome block delayed the useful operational values. The data-first example did not need a generated hero photo.
-- Small changes to a large starter are better represented by guarded changes to relevant fields than by resending all pages.
+- A fixed-height image cropped too tightly on a wider viewport. Limiting content width and increasing the image area's height preserved the focal content.
+- Replacing an image required checking appearance-specific overrides so light and dark mode used the intended resource.
+- A horizontal collection inside a width-constrained parent needed its clipping behavior reviewed. At the largest text size, wider items preserved whole words and a single column kept long values readable.
+- Removing a decorative block brought the primary data into view earlier.
+- Guarded edits to the affected fields let the trial verify the changes against existing source.
 
 ## Evidence and limits
 
-The final review covers nine selected phone pages in both appearances and the three app home pages on iPad portrait/landscape, both appearances: 30 standard-size page variants. Nine exact-source native text-size/scroll exports exercise larger text and bottom reachability. No tap, save, stepper, search or backend interaction is claimed by those exports.
+The final review covered 30 standard-text native variants across phone and tablet, including light and dark appearance. Nine larger-text and scroll exports supplemented that review. The exports established visual coverage. Interaction, full accessibility, Android, web, physical devices, store binaries and provider-backed behavior remain unverified.
 
-The generators were run with two hash seeds and produced identical operation bytes. Applying those operations to fresh native starter copies, then reading the saved native source back, reproduced all three final payloads and revisions. A patch receipt's immediate revision was not used as a substitute for saved readback.
+Two hash seeds produced identical edit operations. Applying the operations to fresh copies and reading the saved source back reproduced the final payloads and revisions.
 
-App-complete, navigation and binding checks passed. The host's full asset validator still reports missing assets for page IDs and native symbol names. A minimal negative probe also accepts a genuinely absent data-image filename. These false positives and false negative are unresolved tool defects; the check was not forced green. Independent typed file checks found all 132 data-image references in the recipe app and all 10 in the training app; the utility had no data images. Actual native exports show the new images decoded.
+App-complete, navigation and binding checks passed. The asset validator reported missing images for non-image values and accepted a deliberately absent image in a negative control. Independent checks verified the actual image references on disk, and native exports showed that the new images decoded.
 
-The 20 behavioral scenarios are prompts/criteria; this guided trial does not establish a blind pass for the whole set. Physical devices, Android/web, full accessibility, store binaries and provider-backed application behavior remain unverified.
-
-## Final saved revisions
-
-- Sunday Table: 653b2cf2fb34b24a1c1ae5440203350cfce45c839673fce185cd7c0c9ebd65b9
-- Coast Club: 95130d6a9dd880c4093d7159bbbec7938f053312b375fbb6becce7b66928602a
-- Little Batch: c1ecfa5aa2848a66558a7e4380b38965a0e2efa8fa9bea9fb0a5e2a23738910b
-
-Selected source packages, masters, optimized assets, source-bound exports and compact findings are retained privately outside this skill repository.
+The guided trial did not independently evaluate the broader behavioral scenario set. Original source packages, captures and receipts are retained privately.

@@ -6,6 +6,8 @@ Prepare every tracked change, commit message and shared repository discussion fo
 
 Use published Appmost contracts, public documentation and synthetic fixtures. Read access to a private repository, conversation or MCP result does not authorize publishing its contents. Never include credentials, customer data, private discussions, account-specific identifiers, internal logs, signing material or confidential implementation details. Public URLs and identifiers deliberately published by their owners are acceptable.
 
+Keep the skills and this repository independent of specific customer projects and actual templates, including published templates. This applies to examples, evaluations, metadata and assets as well as skill instructions. Keep project and template names, IDs, copied content or settings, screenshots and case-specific source references in the appropriate private workspace. Describe the content role or required capability and discover eligible templates through the current catalog. Use independently authored synthetic examples to demonstrate reusable behavior.
+
 Keep maintenance guidance general. Put private task notes and raw captures in an appropriate private location outside the skill package. If suitability for publication is uncertain, leave out the uncertain material and ask the owner while continuing unaffected work. Do not weaken these publication rules without the owner's explicit approval.
 
 There is intentionally no AGENTS.md or private instruction overlay in this initial repository. This document is contribution guidance, not an automatically loaded agent instruction file.
