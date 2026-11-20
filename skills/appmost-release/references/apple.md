@@ -6,6 +6,14 @@ Inspect the Appmost project's final source, app/bundle identity, version/build, 
 
 Fetch the relevant current [App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/) and [App Store Connect Help](https://developer.apple.com/help/app-store-connect/) for the app's features and requested release. Verify completeness, accurate metadata and review access. Claims about privacy, payments or account behavior must match the actual app and its integrations; unresolved declarations require the owner's factual input.
 
+## App Privacy
+
+Check the privacy policy URL and the Apple data disclosure as separate fields. Base the disclosure on the selected build's behavior, bundled SDKs, and verified handling by the app's services and partners. Resolve unknown retention or collection with the owner before declaring `DATA_NOT_COLLECTED`. [Apple App Privacy details](https://developer.apple.com/app-store/app-privacy-details/)
+
+Use an available App Privacy tool that can read answers and publication state for the exact app. If the host has the App Store Connect CLI's `asc web privacy` commands, they use a separate Apple web session. Check it with `asc web auth status`. If sign-in is needed, prefill the known Apple Account and verified organization where possible and let the owner enter the password and two-factor code in the interactive terminal. For accounts with multiple organizations, match the intended organization to the CLI's provider list and pass its numeric ID with `--provider-id`. The signing team identifier is a separate value. After a provider selection error, check session status before restarting sign-in.
+
+Read the current answers and publication state, then inspect the change plan before saving. If a read displays `DATA_NOT_COLLECTED` with an unpublished or unknown state, use the plan to determine whether the answer still needs to be created. After an authorized save, read the answers back. When authorized to publish the disclosure, publish it and verify both the exact answers and the published state on a fresh read. App Privacy publication, App Review submission and public app release are independent operations. If the web session is unavailable, give the owner the direct App Privacy page and the prepared answers. [Apple's publishing steps](https://developer.apple.com/help/app-store-connect/manage-app-information/manage-app-privacy/) · [App Store Connect CLI workflow](https://github.com/rorkai/app-store-connect-cli-skills/blob/main/skills/asc-submission-health/references/app-privacy.md)
+
 ## TestFlight through Appmost
 
 Resolve two independent choices before preparation: the authorized tester audience (internal or external) and export eligibility (`APP_STORE_ELIGIBLE` or `INTERNAL_ONLY`). Follow the user's instructions and workspace policy. A request for internal testers does not itself select the restricted internal-only export.
