@@ -32,6 +32,8 @@ Before promoting a candidate, review public suitability and the full outgoing di
 
 Promote the same verified content from staging to main with a normal direct push after validation. Recheck both branch heads first; if concurrent changes require integration, preserve them and validate the affected result on staging before promotion. Never force-push, discard concurrent work or silently promote an untested variant. If repository rules prevent the direct workflow, report the exact conflict rather than opening a PR as a fallback.
 
+After each promotion to main, refresh the stable skill installation used by the publishing workspace from the published commit. Fast-forward a dedicated main checkout or update the installed skills through the host's supported installer. Verify the resolved skill directories, versions, and changed files against published main before reporting completion. Keep candidate installs on a separate checkout. [Stable and candidate installations](docs/installation.md#stable-and-candidate-installations)
+
 Review changes to publication safeguards, packaging and execution or release authority explicitly before promotion. This workflow does not authorize changing repository visibility, licensing, releasing packages or executing app builds, uploads or publishing; those operations retain their existing authorization requirements. Branches share the repository's visibility: staging is a development channel, not a private environment inside a public repository.
 
 ## Maintain format compatibility
