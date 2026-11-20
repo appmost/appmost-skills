@@ -16,7 +16,11 @@ Use comparable viewport, language, text size, state and content. Keep the origin
 
 Inspect the pair side by side at readable size. Check font family/design, weight, size, line height and actual wrapping separately. A declared font or force-system-font flag is insufficient if the renderer ignores it. Treat an unavailable rendering capability as an explicit discrepancy, not a fidelity pass or a reason to invent document fields.
 
-Rank discrepancies by impact, correct a coherent batch in the source, then render and compare again. Continue while material differences remain fixable within scope. Avoid a fixed minimum iteration count or arbitrary restyling after the target is met. Count a design iteration as a comparison that leads to a source correction and a reviewed new render; builds, repeated exports and validator calls alone are not design iterations.
+Treat the first render after implementation as the baseline. For each new or redesigned screen or modal, compare this render with the intended reference and correct the most consequential fixable difference. Inspect a fresh native render of the correction. This is the mandatory first iteration.
+
+Use one to three iterations per screen or modal. One is usually enough for a close initial result or a tight deadline. Use two or three when gaps in hierarchy, composition, spacing or content remain material, or when the requested quality calls for closer fidelity. Group related corrections into a round and recheck the affected states. If material differences remain after the available rounds, record them and keep visual acceptance open. If you cannot make a meaningful correction or obtain a fresh render, record the incomplete iteration.
+
+Count a design iteration as a comparison that leads to a substantive source correction and a reviewed new render. Another build, a repeat export, a validator result or an unrelated change does not count.
 
 ## Disclosure on rich content
 
