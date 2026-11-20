@@ -12,17 +12,17 @@ Avoid recurring generated defaults: identical card stacks on every page, excessi
 
 ## 2. Platform and behavior
 
-Use native navigation, tab bars, modal dismissal, menus and available controls. Check that no custom content duplicates system chrome. Verify that X, back, cancel and confirm perform their distinct intended actions. Compare each top-bar icon and accessible name with its actual destination; follow [top-bar actions and destinations](navigation-data.md#top-bar-actions-and-destinations) rather than assuming an icon is truthful. On iOS prefer the platform's modern material when available; other platforms retain their own native conventions.
+Use native navigation, tab bars, modal dismissal, menus and available controls. Check that no custom content duplicates system chrome, including the screen title. A short, occasional edit on a settings screen usually belongs in a focused native sheet opened by a labeled row. Keep frequent, essential form input in the main flow. Verify that X, back, cancel and confirm perform their distinct intended actions. Compare each top-bar icon and accessible name with its actual destination; follow [top-bar actions and destinations](navigation-data.md#top-bar-actions-and-destinations) rather than assuming an icon is truthful. On iOS prefer the platform's modern material when available; other platforms retain their own native conventions.
 
 ## 3. Hierarchy and density
 
 Use a small coherent type hierarchy and semantic foreground roles. Keep body copy readable and meaningful labels visible. System typography is a strong default for controls; brand expression can live in content, imagery and limited display moments.
 
-Check actual row heights, clear section grouping and a restrained primary action. Separate content-driven height from interactive hit regions. Avoid compensating for long text with excessive padding or truncation.
+Check actual row heights, clear section grouping and one visually dominant action per state when one is needed. Keep automatic loading automatic. Offer a short retry label and an explanation only in the recovery state. Separate content-driven height from interactive hit regions. Avoid compensating for long text with excessive padding or truncation.
 
 Inspect the boundary below controls such as filters, segmented controls and action buttons, including the visible distance from the control's painted edge to the next visible heading, chart or content group. Check actual visible neighbors when conditional content is shown or hidden; spacing owned only by a hidden block can disappear with it. Check painted-edge gaps between adjacent independent controls too, including filled or outlined buttons and input fields. Give each gap one owner using existing margins, container spacing or a spacer; preserve meaningful grouping and intentionally joined controls such as segmented controls and steppers. Judge the rendered result at normal and larger text sizes rather than applying a universal gap value. Absence of clipping alone does not establish balanced spacing.
 
-For nearby secondary text-only (clear) actions, prefer a shared horizontal row when their roles belong together and complete titles and usable hit areas fit. Avoid a vertical sequence of visually identical links that obscures grouping or competes with the primary action. When narrow width, translation or larger text prevents a readable row, move actions to the content or navigation context they belong to, or use clearly separated groups. Preserve every destination and verify the actual render at normal and larger text sizes.
+A settings destination ordinarily uses a full-width labeled row, a disclosure indicator and the group's separator instead of a trailing “View” label. Separate command rows such as signing out from destructive commands. For nearby secondary text-only actions elsewhere, prefer a shared horizontal row when their roles belong together and complete titles and usable hit areas fit. Avoid a vertical sequence of visually identical links that obscures grouping or competes with the primary action. When narrow width, translation or larger text prevents a readable row, move actions to the content or navigation context they belong to, or use clearly separated groups. Preserve every destination and verify the actual render at normal and larger text sizes.
 
 ## 4. Geometry
 
@@ -36,7 +36,7 @@ Fix the source owner, not a screenshot. An intended shared edge needs measured e
 
 ## 5. Readability and adaptability
 
-Review relevant light/dark appearances, long translations, larger text and the narrowest supported viewport. Inspect icon-only controls for meaningful accessibility labels where the contract exposes them. Verify contrast from actual colors when available rather than claiming a numeric result from a screenshot alone.
+Review relevant light/dark appearances, long translations, larger text and the narrowest supported viewport. Inspect icon-only controls for meaningful accessibility labels where the contract exposes them. Verify contrast from actual colors when available rather than claiming a numeric result from a screenshot alone. An input needs a persistent, visually distinct boundary or surface in light and dark appearances. Inspect it empty and filled, with focus when the renderer supports it. Check the required control boundary against its surrounding surface; placeholder text alone does not communicate the field extent.
 
 Treat reduced transparency, contrast and motion settings through the supported native behavior. Do not claim those states were exercised unless they were. An unavailable setting is a verification limit, not a fabricated pass.
 

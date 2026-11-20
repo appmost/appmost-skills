@@ -12,7 +12,7 @@ A visible edge includes safe/content bounds, ancestor spacing, row outerMargins,
 
 At a visible surface boundary, application text must never touch, cross or straddle the painted edge. Check every facing side against the actual row, card, native group or ancestor that paints the surface. Include time/value columns and nested text. Keep outer surface alignment and internal text clearance as separate constraints; moving the surface with outer margins does not add internal clearance. Count verified intrinsic template insets once.
 
-Give each gap one owner. A card's outside alignment and its internal content padding are separate decisions. Preserve intentional carousel peeks, icon columns and media treatment. Use the actual navigation guide where measured; do not impose one hard-coded navbar margin on every device.
+Measure adjacent actionable rows with their actual state-dependent neighbors, especially where an occasional action appears. Review both the measured frames and the image, and remeasure after a change. Give each gap one owner. A card's outside alignment and its internal content padding are separate decisions. Preserve intentional carousel peeks, icon columns and media treatment. Use the actual navigation guide where measured; do not impose one hard-coded navbar margin on every device.
 
 minCellDynamicHeight is a minimum, not the rendered height. Natural text wrapping, controls, template insets, margins and padding all matter. Let noninteractive text grow with content. Keep interactive hit areas usable; Appmost's current guidance uses at least 44 logical points. Do not enlarge every text row to a control's minimum or add padding in proportion to text length.
 
@@ -22,7 +22,7 @@ Do not hide excessive spacing by clipping text or applying a small maximum heigh
 
 1. Discover list_preview_contexts and choose supported variants for the actual target.
 2. Use review_page when available. Record its revision, renderContext, model paths, measured frames and image path. Keep comparison coordinates in one logical space.
-3. Inspect the complete page at readable size. Check alignment, text hierarchy, truncation, controls, contrast, media cropping, empty space and navigation. Inspect meaningful states, not just the initial populated page.
+3. Inspect the complete page at readable size. Check alignment, text hierarchy, truncation, controls, contrast, media cropping, empty space and navigation. Inspect the states users actually encounter, including first-use, signed-in, recovery and edited-sheet states when relevant. A signed-out or default preview cannot verify an authenticated variant. Use the existing isolated preview/test dataset or a clearly labeled synthetic fixture.
 4. For supported narrow alignments/gaps, call plan_layout_adjustment with the returned nodes, exact revision and same context. Pass its plan unchanged to apply_layout_adjustment. Read the measured result and verification flags.
 5. For other changes, edit existing source properties through a guarded operation. Render again and verify affected elements and surrounding content.
 6. Inspect the final images after the final source edit. Keep before/after exports in separate directories when the renderer can reuse filenames.

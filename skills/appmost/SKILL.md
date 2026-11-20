@@ -4,7 +4,7 @@ description: "Create, edit and visually review apps through Appmost MCP, includi
 license: "Appmost Skills Limited Use License 1.0. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.15"
+  version: "0.1.16"
   appmost-document-version: "2"
   appmost-format-reviewed: "2.2.0"
   appmost-format-review-date: "2026-11-14"
@@ -47,7 +47,7 @@ Plan the screen's focal content and visible primary action before choosing row t
 
 Application text must never touch, cross or straddle a visible background or border edge. Keep visible internal spacing within its actual row, card, native group or ancestor surface; count intrinsic template insets once and verify the rendered result.
 
-Use native Appmost navigation, tabs, toolbar items, menus, sheets and controls whenever they cover the interaction. Keep the platform's modern appearance and behavior, including Liquid Glass on supported iOS versions. Do not draw a second tab bar in content or duplicate system safe-area spacing. For a modal close, prefer the native X control; distinguish closing from cancelling, confirming and navigating back.
+Use native Appmost navigation, tabs, toolbar items, menus, sheets and controls whenever they cover the interaction. Let the native title own the screen heading. Use its large-title mode when that hierarchy calls for one. Keep the platform's modern appearance and behavior, including Liquid Glass on supported iOS versions. Do not draw a second tab bar in content or duplicate system safe-area spacing. For a modal close, prefer the native X control; distinguish closing from cancelling, confirming and navigating back.
 
 Capture a page that belongs to a tab bar through its tab container. Check that the complete screenshot shows the native tab bar and the correct selected tab.
 
