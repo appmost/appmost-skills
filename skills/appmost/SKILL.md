@@ -4,7 +4,7 @@ description: "Create, edit and visually review apps through Appmost MCP, includi
 license: "Appmost Skills Limited Use License 1.0. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.16"
+  version: "0.1.17"
   appmost-document-version: "2"
   appmost-format-reviewed: "2.2.0"
   appmost-format-review-date: "2026-11-14"
@@ -42,6 +42,8 @@ Read [assets and localization](references/assets-localization.md) for image sele
 Represent loading, empty, populated and error states where they matter to the requested app. Preserve useful content, accessibility and functioning navigation during visual changes.
 
 ## Design and verify the actual result
+
+Before editing a new screen or modal or substantially redesigning an existing one, identify its approved visual reference. Reuse that reference if it covers the intended state. Otherwise create an ImageGen sketch with an available authorized tool, review it for native composition, and save it with its screen and state before changing app source. Read the [sketch and comparison workflow](references/reference-fidelity.md#sketch-before-implementation).
 
 Plan the screen's focal content and visible primary action before choosing row templates. Preserve required controls and the app's visual character during refinement; a simpler navigation route alone does not replace a requested button. Read the role-based [composition example](references/design-examples.md#text-only-editorial-feature-preserve-the-primary-action) when a text-only page loses hierarchy or becomes a generic icon list.
 

@@ -2,6 +2,12 @@
 
 Use this when the user has selected a sketch, screenshot or design direction to implement. It supplements native review; it does not require an exact screenshot clone where the user requested only inspiration.
 
+## Sketch before implementation
+
+List the affected screens and meaningful presentations, including a new sheet reached from an existing page. Match each to a saved reference in the relevant state. If the user already selected a reference, use it where it covers the scope. Sketch uncovered screens and substantial redesigns with an authorized image-generation tool before changing page source. Reuse the established direction for small layout and copy refinements. When the choice materially changes the product direction, follow the project's decision process.
+
+Review the sketch alongside neighboring screens. Confirm which existing native components own the title, navigation, list rows and input. Save the sketch and its creation date with the affected screen and state. If generation is unavailable, record the missing sketch and continue independent work. A sketch made after a screen was built can guide a subsequent revision. Record the implementation it was compared against and retain the actual order of work.
+
 ## Compare before declaring completion
 
 Identify the reference's defining choices: display versus body typography, hierarchy and line breaks, density, shared edges, image crop, colors, content grouping and visible actions. Record intentional native adaptations separately from accidental differences. Do not silently replace the selected composition with a convenient template.
