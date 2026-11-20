@@ -27,6 +27,8 @@ Do not hide excessive spacing by clipping text or applying a small maximum heigh
 5. For other changes, edit existing source properties through a guarded operation. Render again and verify affected elements and surrounding content.
 6. Inspect the final images after the final source edit. Keep before/after exports in separate directories when the renderer can reuse filenames.
 
+A resolved text or button frame may extend beyond its visible label. Check visible edges, wrapping and typographic hierarchy in the matching image. Use a reported hit region to check target geometry, and confirm activation with an applicable app-owned test. With a screenshot-only reference, record approximate image measurements in pixels and keep them separate from logical Appmost coordinates. Use the [reference comparison workflow](reference-fidelity.md#compare-before-declaring-completion) to choose what to measure.
+
 A stale context, unsupported row relationship or verification failure calls for fresh inspection, not a modified plan. Do not infer row indexes from visual order. Resolved x/y coordinates are measurements, not a new absolute-positioning model.
 
 ## Capture tab navigation
