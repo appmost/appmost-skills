@@ -40,6 +40,17 @@
     ]
   },
   {
+    "id": "reference-preservation-and-visible-edges",
+    "skill": "appmost",
+    "prompt": "Use the supplied equipment list design. Keep its chart summary and both visible item actions. In the first render, Details looks indented, Reserve sits lower than Details, the headings look smaller, and fewer items fit. Review those differences and improve the app. Sketch the new reserved-items sheet in the same design before implementing it.",
+    "expected": [
+      "Preserve the selected reference and use it as image input for the related sheet when the tool supports it. Review the candidate against the original before authoring.",
+      "Try one representative native item group before repeating it. Keep the focal summary, the two independently tappable actions and their visual relationships.",
+      "Track each reported issue with a target and the final observed result. Compare visible label edges, standard-text action baselines and apparent heading size in equally scaled captures. Count only complete items clear of native chrome.",
+      "Name any open difference after at least one substantive correction and fresh full render. Improved density or successful validation cannot cover a remaining alignment failure. Review a longer Reserved state and larger text separately."
+    ]
+  },
+  {
     "id": "equal-padding",
     "skill": "appmost",
     "prompt": "The hero and heading have equal padding but their visible edges differ.",
