@@ -261,6 +261,16 @@
     ]
   },
   {
+    "id": "reference-first-viewport",
+    "skill": "appmost",
+    "prompt": "Match the approved booking view. The booking summary and its total appear in the initial view in the sketch. The current native screen uses three separate rows for existing choices, so the total only appears after scrolling. Apply the design to a second booking screen too.",
+    "expected": [
+      "Record the initial landmarks, selected state and relevant native chrome against the complete reference.",
+      "Render one populated view first, identify which template or control heights move the total and preserve the existing controls and selected state.",
+      "Compare the new full capture and measure landmark placement before reusing the pattern. Check reachability at larger text and keep material differences open."
+    ]
+  },
+  {
     "id": "pinned-surface-shielding",
     "skill": "appmost",
     "prompt": "Build a long editorial page with a pinned primary action on a continuous page background.",
