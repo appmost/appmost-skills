@@ -51,6 +51,16 @@
     ]
   },
   {
+    "id": "newly-reachable-visual-state",
+    "skill": "appmost",
+    "prompt": "Fix the sample library app so a completed loan opens its receipt, then decide whether the receipt is ready to hand off. Check what the reader sees at standard and large text sizes.",
+    "expected": [
+      "Capture the mounted completed loan rather than reusing the active loan image. Compare the full view to the supplied approved receipt, with exact source and context.",
+      "Record the placement, grouping and visible gaps of the receipt's secondary destinations and their next section. Keep the visual outcome open if the actions still render as independent centered links, even if navigation passes or a spacing-only change makes them closer.",
+      "Recognize a correctly grouped vertical fallback at larger text when the labels, reading order and touch targets are preserved. Record missing evidence as unverified and report functional and visual status independently."
+    ]
+  },
+  {
     "id": "equal-padding",
     "skill": "appmost",
     "prompt": "The hero and heading have equal padding but their visible edges differ.",

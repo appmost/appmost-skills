@@ -4,7 +4,7 @@ description: "Create, edit and visually review apps through Appmost MCP, includi
 license: "Appmost Skills Limited Use License 1.0. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.23"
+  version: "0.1.24"
   appmost-document-version: "2"
   appmost-format-reviewed: "2.2.0"
   appmost-format-review-date: "2026-11-14"
@@ -62,6 +62,8 @@ Use list_preview_contexts to choose supported device, renderer, appearance, lang
 Inspect the image itself and relate findings to returned model paths and frames. For spacing changes, declare the intended rhythm by content relationship and verify the visible gaps and card insets before and after. Use the [vertical spacing check](references/design-review.md#verify-vertical-spacing) when measured text frames are available. Review through [the design quality checks](references/design-quality.md), prioritizing platform conventions, readable content and the screen's main task before decoration. Correct the actual source with existing properties, then render again. For supported edge/gap changes, use plan_layout_adjustment and apply_layout_adjustment without changing the returned plan. A successful static validator does not establish visual quality.
 
 Before the first correction, list every user-reported visual issue and essential reference relationship as a [required acceptance check](references/reference-fidelity.md#compare-before-declaring-completion). Inspect the full reference and native capture side by side, then use same-scale close-ups or guides for disputed edges, typography and spacing. After first implementation, make at least one substantive correction and inspect a fresh full native render of each new or substantially redesigned screen or modal. Plan one to three rounds based on the deadline, quality bar and initial differences. [Keep visual acceptance open](references/reference-fidelity.md#decide-visual-acceptance) for any remaining required failure or missing evidence.
+
+Apply the same review to a materially different state that a navigation or data change makes reachable for the first time. Before reporting a screen visually complete, record its [visual handoff evidence](references/reference-fidelity.md#evidence-and-handoff) for the exact mounted state.
 
 Review representative phone and wider layouts when relevant, plus long translated text and larger text sizes. For multi-page work, a contact sheet establishes coverage; inspect important pages at readable size too. Report unavailable variants as unverified.
 
