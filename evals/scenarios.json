@@ -30,6 +30,16 @@
     ]
   },
   {
+    "id": "whole-reference",
+    "skill": "appmost",
+    "prompt": "Implement the approved reservation screen and date sheet in this sample app. The reference has availability, a price breakdown, and a confirm action next to edit. Review a loaded reservation and a date with no availability.",
+    "expected": [
+      "Map all essential regions and controls in the approved screen and sheet before altering source. Identify which data and actions supply each one.",
+      "Use the first complete native capture as the baseline, compare the same state and scale, make at least one substantive source correction, and inspect a fresh whole view.",
+      "Check visible edges, widths and gaps in the action pair. Keep a missing essential part or visually unusable label open even when the other measurements and the flow test pass."
+    ]
+  },
+  {
     "id": "equal-padding",
     "skill": "appmost",
     "prompt": "The hero and heading have equal padding but their visible edges differ.",

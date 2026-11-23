@@ -4,7 +4,7 @@ description: "Create, edit and visually review apps through Appmost MCP, includi
 license: "Appmost Skills Limited Use License 1.0. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.20"
+  version: "0.1.21"
   appmost-document-version: "2"
   appmost-format-reviewed: "2.2.0"
   appmost-format-review-date: "2026-11-14"
@@ -45,7 +45,7 @@ Represent loading, empty, populated and error states where they matter to the re
 
 Before editing a new screen or modal or substantially redesigning an existing one, identify its approved visual reference. Reuse that reference if it covers the intended state. Otherwise create an ImageGen sketch with an available authorized tool, review it for native composition, and save it with its screen and state before changing app source. Read the [sketch and comparison workflow](references/reference-fidelity.md#sketch-before-implementation).
 
-Plan the screen's focal content and visible primary action before choosing row templates. Preserve required controls and the app's visual character during refinement; a simpler navigation route alone does not replace a requested button. Read the role-based [composition example](references/design-examples.md#text-only-editorial-feature-preserve-the-primary-action) when a text-only page loses hierarchy or becomes a generic icon list.
+Before building each new or substantially redesigned screen or modal, [map the whole reference](references/reference-fidelity.md#map-the-complete-reference-before-building). Account for every essential region, control and meaningful state. Identify the intended native component, data or action, and the evidence needed to verify it. Record the intended scope, hierarchy and user-visible impact in the review notes when a platform or data gap prevents full implementation. Plan the screen's focal content and visible primary action before choosing row templates. Preserve required controls and the app's visual character during refinement; a simpler navigation route alone does not replace a requested button. Read the role-based [composition example](references/design-examples.md#text-only-editorial-feature-preserve-the-primary-action) when a text-only page loses hierarchy or becomes a generic icon list.
 
 Application text must never touch, cross or straddle a visible background or border edge. Keep visible internal spacing within its actual row, card, native group or ancestor surface; count intrinsic template insets once and verify the rendered result.
 
@@ -61,7 +61,7 @@ Use list_preview_contexts to choose supported device, renderer, appearance, lang
 
 Inspect the image itself and relate findings to returned model paths and frames. For spacing changes, declare the intended rhythm by content relationship and verify the visible gaps and card insets before and after. Use the [vertical spacing check](references/design-review.md#verify-vertical-spacing) when measured text frames are available. Review through [the design quality checks](references/design-quality.md), prioritizing platform conventions, readable content and the screen's main task before decoration. Correct the actual source with existing properties, then render again. For supported edge/gap changes, use plan_layout_adjustment and apply_layout_adjustment without changing the returned plan. A successful static validator does not establish visual quality.
 
-Use [reference fidelity](references/reference-fidelity.md#compare-before-declaring-completion) to set acceptance criteria for a few visible relationships before the first comparison. After the first implementation of each new or redesigned screen or modal, compare the native baseline, make at least one substantive source correction, and review a fresh render against the same criteria. Plan for one to three iterations based on the deadline, requested quality and size of the initial gaps.
+Use [reference fidelity](references/reference-fidelity.md#compare-before-declaring-completion) to compare the complete native view before selecting a few measurable relationships. After the first implementation of each new or redesigned screen or modal, make at least one substantive correction and review a fresh native render of the whole affected view against the same reference and state. Plan one to three iterations based on the deadline, desired quality and size of the initial gaps. [Keep visual acceptance open](references/reference-fidelity.md#decide-visual-acceptance) while material discrepancies remain, even when structural or flow tests pass.
 
 Review representative phone and wider layouts when relevant, plus long translated text and larger text sizes. For multi-page work, a contact sheet establishes coverage; inspect important pages at readable size too. Report unavailable variants as unverified.
 
