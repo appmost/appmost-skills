@@ -4,7 +4,7 @@ description: "Create, edit and visually review apps through Appmost MCP, includi
 license: "Appmost Skills Limited Use License 1.0. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.24"
+  version: "0.1.25"
   appmost-document-version: "2"
   appmost-format-reviewed: "2.2.0"
   appmost-format-review-date: "2026-11-14"
@@ -43,7 +43,7 @@ Represent loading, empty, populated and error states where they matter to the re
 
 ## Design and verify the actual result
 
-Before authoring a new or substantially redesigned screen or modal, identify the intended state and its approved visual reference. Reuse a matching approved sketch. Where coverage is missing, create and review an ImageGen sketch before changing app source. For an extension or redesign, give the image tool the existing visual reference as an image input and check that the sketch preserves its required composition, hierarchy and controls. Use the [reference and sketch workflow](references/reference-fidelity.md#sketch-before-implementation).
+Before any visual source change, including spacing, alignment or typography, lock an actual ImageGen sketch for each affected page and state. Reuse a matching approved ImageGen original. When coverage is missing, create and open the sketch first. Run the [pre-edit reference check](references/reference-fidelity.md#sketch-before-implementation) before the first UI patch, including in a test copy. Keep the same sketch through the correction rounds and show it alongside the baseline and final native images.
 
 [Map the whole reference](references/reference-fidelity.md#map-the-complete-reference-before-building) before choosing templates. Account for each essential region, control and state, the real data/actions, the content grid and what belongs in the first viewport. [Prove the hardest representative component](references/reference-fidelity.md#prove-the-hardest-component-first) in a native render before repeating it across a list or other screens. If required composition exceeds a component's capacity, try a supported composition and keep the gap open until the rendered result meets the reference or a different target is approved.
 

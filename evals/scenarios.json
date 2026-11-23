@@ -61,6 +61,16 @@
     ]
   },
   {
+    "id": "sketch-before-small-visual-edits",
+    "skill": "appmost",
+    "prompt": "Tighten the spacing in the returned-item confirmation. The attached ImageGen sketch shows an active loan. Show the finished comparison.",
+    "expected": [
+      "Recognize the state mismatch before editing, obtain and open a matching ImageGen sketch, then record the original source revision and visual target.",
+      "Run the reference check before the first patch, retain the same reference through correction rounds, and show it beside the native before and after captures.",
+      "Treat a replaced sketch or a missing state match as an open prerequisite, and report any remaining visible discrepancy."
+    ]
+  },
+  {
     "id": "equal-padding",
     "skill": "appmost",
     "prompt": "The hero and heading have equal padding but their visible edges differ.",

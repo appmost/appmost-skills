@@ -1,10 +1,23 @@
 # Implementing an approved visual reference
 
-Use this when the user has selected a sketch, screenshot or design direction to implement. It supplements native review; it does not require an exact screenshot clone where the user requested only inspiration.
+Use this for visual changes to Appmost apps. Keep the selected design direction and review how the native presentation realizes it. The requested degree of fidelity determines the visual checks.
 
 ## Sketch before implementation
 
-List the affected screens and meaningful presentations, including a new sheet reached from an existing page. Match each to a saved reference in the relevant state. Use the reference already selected by the user where it covers the scope. Preserve that original as the comparison target. Sketch uncovered screens and substantial redesigns with an authorized image-generation tool before changing page source. Reuse the established direction for small layout and copy refinements.
+List the affected screens and meaningful presentations, including sheets, signed-in roles and conditional states. A visual change of any size needs a saved ImageGen image that depicts the state being changed. Open an existing matching approved original when there is one. If the user supplied another visual reference, retain it and use it as input for the ImageGen sketch. When a matching sketch is missing, use ImageGen and open the result before authoring.
+
+Before the first UI edit, save a small record in the existing task evidence. Use the exact unedited revision or immutable source snapshot, page ID, state, ImageGen artifact or approval evidence and at least one observable comparison target. Capture the unedited native baseline for the same state when it exists. Name a new presentation or an unavailable comparable baseline in the notes. Run the bundled [reference checker](../scripts/check_visual_reference.py), with the current source revision as reported by the editor or source inspection.
+
+```sh
+python3 -B scripts/check_visual_reference.py record review.json \
+  --page receipt --state returned --revision SOURCE_REVISION \
+  --image sketch.png --provenance 'ImageGen output and its selected reference' \
+  --target 'The return date and receipt action share the summary group'
+python3 -B scripts/check_visual_reference.py check review.json \
+  --page receipt --state returned --revision SOURCE_REVISION
+```
+
+Run the check from the installed skill directory or use its absolute script path. Keep the record and images in the task workspace. The check requires a real local image and verifies its stored digest, declared state and starting revision. Inspect the actual distinguishing content and actions to confirm the state and ImageGen provenance. If the prerequisite is missing or the check fails, resolve it before editing that presentation. Continue independent investigation or functional verification when possible. Later rounds can run `check` without `--revision` to verify the same page, state and reference bytes against an edited source.
 
 When generating a related or revised sketch, supply the chosen reference or relevant neighboring screens as image inputs. In the brief, say which regions, content density, relative type emphasis, shared edges, control placements and native chrome to carry over and which parts may change. With no visual input support, use a written description of those relationships and record the limitation. Open the original and candidate images together before implementing. If an essential region disappears, two controls move onto separate rows, or a focal component becomes a generic list, correct the sketch first. An approved sketch stays the target until the user or established design decision process accepts a materially different direction.
 
@@ -88,4 +101,4 @@ Pixel differences or SSIM can flag changed regions when images are aligned. LPIP
 
 Use the existing task notes for one compact record per affected presentation. Include a newly reachable materially different state even when the change was limited to navigation or data. Record the selected sketch, exact source revision and native context, full baseline and final captures, and each completed correction round. For each required relationship or reported defect, record the reference target, the final visible observation or measurement, and `pass`, `fail` or `unverified`. For nearby secondary actions, include grouping, visible text alignment, the gap between actions and the gap to the next visible section. Check the standard layout and any relevant larger-text reflow.
 
-Only mark visual status complete when the required checks pass in that exact presentation. Keep missing or mismatched evidence open. A clean automatic validator, successful flow test or a shorter gap cannot resolve a visual check that still fails. State the visual and functional outcomes separately in the handoff. Keep this evidence in the app's private workspace. Explain adaptations and capability gaps. Distinguish fixture composition from the live data/navigation flow: selecting an item must populate its destination through the actual supported action before that flow can pass. Opening a destination with no selection should yield an intentional empty state, not an indefinite placeholder loader.
+Show the locked ImageGen sketch, baseline and final native image together at a comparable width. Cite the record and each round that produced a fresh reviewed image. Only mark visual status complete when the required checks pass in that exact presentation. Keep missing or mismatched evidence open. A clean automatic validator, successful flow test or a shorter gap cannot resolve a visual check that still fails. State the visual and functional outcomes separately in the handoff. Keep this evidence in the app's private workspace. Explain adaptations and capability gaps. Distinguish fixture composition from the live data/navigation flow: selecting an item must populate its destination through the actual supported action before that flow can pass. Opening a destination with no selection should yield an intentional empty state, not an indefinite placeholder loader.
