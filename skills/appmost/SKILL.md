@@ -4,7 +4,7 @@ description: "Create, edit and visually review apps through Appmost MCP, includi
 license: "Appmost Skills Limited Use License 1.0. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.26"
+  version: "0.1.27"
   appmost-document-version: "2"
   appmost-format-reviewed: "2.2.0"
   appmost-format-review-date: "2026-11-14"
@@ -54,6 +54,8 @@ Use native Appmost navigation, tabs, toolbar items, menus, sheets and controls w
 Capture a page that belongs to a tab bar through its tab container. Check that the complete screenshot shows the native tab bar and the correct selected tab.
 
 Choose disclosure affordances by content role. Omit trailing chevrons on heroes and complex composed sections by default; preserve the intended tap action and accessibility. Compact rows leading to one detail can use the native disclosure. Check the actual render because assigning navigation may add an arrow automatically.
+
+Use [selection controls](references/native-design.md#selection-controls) for choices. Keep checkmarks and radio indicators out of the label and give them a fixed, separate place so selecting an option cannot move its text.
 
 Read [native design choices](references/native-design.md) for platform chrome, material variants and concrete Appmost property discovery. Read [worked design examples](references/design-examples.md) when starting a composition or replacing a generic generated layout. Read [design and rendering review](references/design-review.md) before a substantial visual change. Establish an intentional content grid, type hierarchy, image treatment and density. Let content and navigation determine the composition.
 

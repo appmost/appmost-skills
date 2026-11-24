@@ -18,6 +18,12 @@ Apple's current toolbar guidance favors standard Back and Close symbols. The pac
 
 A SwiftUI API being available does not mean that an Appmost payload exposes it. Use the existing page dismissal and bar-item contract first. If the required native option is not exposed, report that capability gap instead of inventing a field or rewriting the runtime.
 
+## Selection controls
+
+Use a supported checkbox or toggle for an independent setting. Use a supported segmented control, radio group or single-choice picker for mutually exclusive options. Pair selection semantics with a visible control that shows the active state. Reserve link styling for genuine links, such as terms or licenses near sign-in.
+
+When an option needs a checkmark or radio indicator, give it a dedicated leading or trailing slot. Reserve the same space and text inset in both states. Never put a selection checkmark inline with the label or append it to the label text. Keep the entire choice usable as one target and expose its selected state to accessibility where the host supports it.
+
 ## Group settings at the page or container level
 
 For a standard settings form, prefer the page's inset grouped list style. Let that style own the shared group background and outer corners. In Appmost, explicit row backgrounds, corner radii, borders or vertical outer margins can make adjacent rows render as independent cards even when the page already uses inset grouped. Keep those overrides unset on ordinary grouped rows.

@@ -14,6 +14,8 @@ Avoid recurring generated defaults: identical card stacks on every page, excessi
 
 Use native navigation, tab bars, modal dismissal, menus and available controls. Check that no custom content duplicates system chrome, including the screen title. A short, occasional edit on a settings screen usually belongs in a focused native sheet opened by a labeled row. Keep frequent, essential form input in the main flow. Verify that X, back, cancel and confirm perform their distinct intended actions. Compare each top-bar icon and accessible name with its actual destination; follow [top-bar actions and destinations](navigation-data.md#top-bar-actions-and-destinations) rather than assuming an icon is truthful. On iOS prefer the platform's modern material when available; other platforms retain their own native conventions.
 
+Review the same [selection control](native-design.md#selection-controls) in its selected and unselected states. Verify a clear state change, stable label edges and wrapping, and a usable hit area. Compare the actual rendered labels and adjacent options. Where supported, verify that accessibility reports the state. Include a genuine neighbor link or disclosure in the review when present.
+
 ## 3. Hierarchy and density
 
 Use a small coherent type hierarchy and semantic foreground roles. Keep body copy readable and meaningful labels visible. System typography is a strong default for controls; brand expression can live in content, imagery and limited display moments.
