@@ -20,11 +20,11 @@ A SwiftUI API being available does not mean that an Appmost payload exposes it. 
 
 ## Align actions with content
 
-Use the leading content grid for standalone actions on leading-aligned pages. Align the visible edge of a compact button with the content. Leading-align text inside full-width command and disclosure rows. A full-width primary button on the content grid can keep its system label alignment. Preserve readable labels and native touch targets.
+Align a compact button’s visible boundary with the leading edge of the local content group. Leading-align text inside full-width command and disclosure rows. A filled, full-width primary button on that grid can use the system’s centered label. A full-width hit area around freestanding text still reads as a text link. Preserve readable labels and native touch targets.
 
-Give a command or filter a recognizable control surface and give a destination a disclosure row when it belongs in a list. Reserve link styling for genuine links, such as terms and licenses on sign-in. Center text actions only when the surrounding composition is deliberately centered as a whole, for example a centered sign-in screen. Treat even one freestanding centered text button on a leading-aligned page as a defect.
+Choose by action role. Use a visible button for Refresh, Retry, Copy, Save, or Cancel. Use a segmented control or picker for filters and choices. Use a leading disclosure row for a destination in a content list. Reserve link styling for genuine links, such as terms and licenses on sign-in. A centered text link can fit a deliberately centered sign-in screen. The exception applies to that composition, not to settings or forms that happen to have a centered navigation title. Treat even one freestanding centered text button on a leading-aligned page as a defect.
 
-For related secondary actions, prefer a coherent group of leading-aligned rows or a shared horizontal group with suitable alignment and complete labels. Verify the painted edge of the control, the label position inside it, the spacing to adjacent content and the state in which each action appears.
+Group related secondary actions in leading-aligned rows or in a compact horizontal control group. Inspect the painted control and label edges, the space to adjacent content, and every material state where an action appears. A left-aligned text-only command still needs a visible control. Score navigation, command, and selection affordances separately from alignment.
 
 ## Selection controls
 
