@@ -6,6 +6,20 @@ Inspect the Appmost project's final source, app/bundle identity, version/build, 
 
 Fetch the relevant current [App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/) and [App Store Connect Help](https://developer.apple.com/help/app-store-connect/) for the app's features and requested release. Verify completeness, accurate metadata and review access. Claims about privacy, payments or account behavior must match the actual app and its integrations; unresolved declarations require the owner's factual input.
 
+## Transfer a project and connect Apple credentials
+
+Share the saved `.appmostapp` package through the authorized private repository or file channel. Include the intended bundle identifier, Apple Developer Team ID, and the Appmost build needed for the workflow. Export project files and non-secret setup details separately from signing credentials.
+
+For a different operator publishing to the same Apple team, confirm the authorization and scope first. An App Store Connect Team Key applies to all apps in that team within its role. For access limited to one app, use an app-scoped publishing connection that keeps the team's key on the operator's server when that capability is available. Otherwise the credential owner can perform the upload. An app-scoped individual Apple API key does not support Apple's provisioning endpoints. [Apple API key scope and limitations](https://developer.apple.com/documentation/appstoreconnectapi/creating-api-keys-for-app-store-connect-api)
+
+For a move between Macs under the same authorized team custody, use the original Apple-issued `.p8` through the organization's approved secret store. Provide the Team ID, Issuer ID and Key ID as setup metadata. Keep the private key out of project archives, repositories, chats, and MCP arguments or results. Avoid extracting an existing key from Keychain to assemble an export. Apple makes each key available for download once. If the original is unavailable or a separately authorized operator needs team-level access, the credential owner can provision a dedicated key and manage its revocation.
+
+On the receiving Mac:
+
+1. Sign in to Appmost and discover its live MCP tools. Use a user-owned local `.p8` file with private permissions such as `0600`. Pass its absolute path as `keyPath` along with `organizationId`, `teamId`, `issuerId`, and `keyId` to `app_store_prepare_import_credentials` when available. The organization name must be new or have no Apple credentials.
+2. Check the returned organization, team and key ID. After the authorized operator confirms the destination, call `app_store_import_credentials` with the same inputs and the one-use confirmation token. Require `savedReadbackVerified`. If the save response is uncertain, read `testflight_publish_status` and check the organization and `hasAppStoreConnectCredentials` before retrying.
+3. If the host lacks the import tools, use Appmost's **Build credentials → Manage organisations → Open from file**. After either import, check that the saved organization can read the intended app through `testflight_list_apps` when available. Local import verifies the saved credentials. Apple access, distribution signing and Appmost plan and licence eligibility require their own checks.
+
 ## App Privacy
 
 Check the privacy policy URL and the Apple data disclosure as separate fields. Base the disclosure on the selected build's behavior, bundled SDKs, and verified handling by the app's services and partners. Resolve unknown retention or collection with the owner before declaring `DATA_NOT_COLLECTED`. [Apple App Privacy details](https://developer.apple.com/app-store/app-privacy-details/)

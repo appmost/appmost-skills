@@ -4,7 +4,7 @@ description: "Prepare and verify delivery of apps built with Appmost: App Store/
 license: "Appmost Skills Limited Use License 1.0. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.27"
+  version: "0.1.28"
   appmost-document-version: "2"
   appmost-format-reviewed: "2.2.0"
   appmost-format-review-date: "2026-11-14"
@@ -36,7 +36,7 @@ Discover the current host's tools. A source-code capability, historical job or o
 
 Read only the relevant platform guide:
 
-- [Apple and TestFlight](references/apple.md)
+- [Apple project handoff, credentials and TestFlight](references/apple.md)
 - [Google Play](references/google-play.md)
 - [Web hosting](references/web.md), when the user requests an Appmost web deployment
 
