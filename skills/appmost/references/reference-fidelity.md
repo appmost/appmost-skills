@@ -6,6 +6,8 @@ Use this for visual changes to Appmost apps. Keep the selected design direction 
 
 List the affected screens and meaningful presentations, including sheets, signed-in roles and conditional states. A visual change of any size needs a saved ImageGen image that depicts the state being changed. Open an existing matching approved original when there is one. If the user supplied another visual reference, retain it and use it as input for the ImageGen sketch. When a matching sketch is missing, use ImageGen and open the result before authoring.
 
+For a whole-app review, account for each page and meaningful state. Open the matching ImageGen reference and compare its action roles, alignment and native chrome with the current rules. If the reference is missing or breaks a required rule, regenerate it using the existing reference and native capture as inputs where available. Preserve the essential data, actions and hierarchy. Open the revised sketch and resolve the failed visual rule before using it to guide implementation. Keep any remaining missing references visible in the review evidence.
+
 Before the first UI edit, save a small record in the existing task evidence. Use the exact unedited revision or immutable source snapshot, page ID, state, ImageGen artifact or approval evidence and at least one observable comparison target. Capture the unedited native baseline for the same state when it exists. Name a new presentation or an unavailable comparable baseline in the notes. Run the bundled [reference checker](../scripts/check_visual_reference.py), with the current source revision as reported by the editor or source inspection.
 
 ```sh

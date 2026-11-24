@@ -18,6 +18,14 @@ Apple's current toolbar guidance favors standard Back and Close symbols. The pac
 
 A SwiftUI API being available does not mean that an Appmost payload exposes it. Use the existing page dismissal and bar-item contract first. If the required native option is not exposed, report that capability gap instead of inventing a field or rewriting the runtime.
 
+## Align actions with content
+
+Use the leading content grid for standalone actions on leading-aligned pages. Align the visible edge of a compact button with the content. Leading-align text inside full-width command and disclosure rows. A full-width primary button on the content grid can keep its system label alignment. Preserve readable labels and native touch targets.
+
+Give a command or filter a recognizable control surface and give a destination a disclosure row when it belongs in a list. Reserve link styling for genuine links, such as terms and licenses on sign-in. Center text actions only when the surrounding composition is deliberately centered as a whole, for example a centered sign-in screen. Treat even one freestanding centered text button on a leading-aligned page as a defect.
+
+For related secondary actions, prefer a coherent group of leading-aligned rows or a shared horizontal group with suitable alignment and complete labels. Verify the painted edge of the control, the label position inside it, the spacing to adjacent content and the state in which each action appears.
+
 ## Selection controls
 
 Use a supported checkbox or toggle for an independent setting. Use a supported segmented control, radio group or single-choice picker for mutually exclusive options. Pair selection semantics with a visible control that shows the active state. Reserve link styling for genuine links, such as terms or licenses near sign-in.

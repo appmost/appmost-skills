@@ -71,6 +71,16 @@
     ]
   },
   {
+    "id": "leading-actions-and-sketch-review",
+    "skill": "appmost",
+    "prompt": "Audit this sample app's loan details, empty list and centered sign-in. The loan sketch shows one centered Refresh text button under left-aligned content. The empty-state sketch is missing. Keep the existing actions and add current sketches for any affected states.",
+    "expected": [
+      "Flag the single centered Refresh action in the leading-aligned details and its sketch; preserve the centered sign-in composition and its genuine terms link.",
+      "Use the existing details sketch and current native evidence to generate and open a corrected ImageGen reference. Record an ImageGen reference for the empty state before changing its layout.",
+      "Preserve native control semantics, left-align the visible action to its content grid, and compare full mounted images through a correction round."
+    ]
+  },
+  {
     "id": "equal-padding",
     "skill": "appmost",
     "prompt": "The hero and heading have equal padding but their visible edges differ.",
