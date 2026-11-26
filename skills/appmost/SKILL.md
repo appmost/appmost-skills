@@ -4,7 +4,7 @@ description: "Create, edit and visually review apps through Appmost MCP, includi
 license: "Appmost Skills Limited Use License 1.0. See LICENSE.txt."
 metadata:
   author: "Appmost"
-  version: "0.1.30"
+  version: "0.1.31"
   appmost-document-version: "2"
   appmost-format-reviewed: "2.2.0"
   appmost-format-review-date: "2026-11-14"
@@ -58,6 +58,8 @@ Choose disclosure affordances by content role. Omit trailing chevrons on heroes 
 Align app buttons with the leading content edge by default. On leading-aligned pages, use a visible surface for a command and a native row for a destination. Reserve centered text links for genuine links within a deliberately centered composition. Follow the [action alignment checks](references/native-design.md#align-actions-with-content) in the ImageGen sketch and native render.
 
 Use [selection controls](references/native-design.md#selection-controls) for choices. Keep checkmarks and radio indicators out of the label and give them a fixed, separate place so selecting an option cannot move its text.
+
+Decide which rows belong together before choosing templates. Use proximity, a section heading or one shared surface to show the relationship, and make the gap between independent groups visibly larger. Check the groups and interactive hit areas separately in the native render. See the [grouped page example](references/design-examples.md#group-a-page-by-what-people-need-to-do).
 
 Read [native design choices](references/native-design.md) for platform chrome, material variants and concrete Appmost property discovery. Read [worked design examples](references/design-examples.md) when starting a composition or replacing a generic generated layout. Read [design and rendering review](references/design-review.md) before a substantial visual change. Establish an intentional content grid, type hierarchy, image treatment and density. Let content and navigation determine the composition.
 

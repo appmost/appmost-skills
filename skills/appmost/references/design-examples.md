@@ -2,6 +2,14 @@
 
 These are synthetic authoring recipes, not frozen project JSON or screenshots of a verified app. Use them to reason about a design, then discover the current templates and render the actual result. Reuse the decisions that fit the user's app rather than imposing one visual theme on every project.
 
+## Group a page by what people need to do
+
+Before: a studio settings page places Edit profile, two notification toggles, Help and Contact support in one evenly spaced list. At a glance it is hard to see which controls share a purpose.
+
+After: place Edit profile under Account, the two toggles under Notifications, and the support destinations under Help. Use the native inset grouped list and actual section headings. Give each group one continuous surface, with dividers between peers and a clear gap before the next heading. Align labels on a common leading edge and let longer labels wrap. For a schedule, date headings and whitespace can communicate the same relationship on a plain list. For a plan comparison, put the price, terms and matching action together inside each plan.
+
+Review the actual render in light and dark appearance and at larger text sizes. Inspect the distance from each heading to its first row, the gap to the next group, and the clearance inside any painted edges. Measure each interactive target separately from its visual row or switch track.
+
 ## Library: useful content with native tabs
 
 Brief: help someone continue reading, browse a collection and find saved items.
